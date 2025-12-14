@@ -51,7 +51,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="w-full px-6 md:px-16 py-12">
+    <div className="w-7xl px-6 md:px-16 py-12 m-auto">
       {/* Header */}
       <h3 className="text-center text-green-700 font-medium">Testimonials</h3>
       <h2 className="text-center text-3xl font-bold mt-1">
@@ -72,14 +72,14 @@ const Testimonials = () => {
       <div className="relative mt-10">
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hover:bg-gray-100"
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hover:bg-gray-100 cursor-pointer"
         >
           <FiChevronLeft size={22} />
         </button>
 
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hover:bg-gray-100"
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hover:bg-gray-100 cursor-pointer"
         >
           <FiChevronRight size={22} />
         </button>
