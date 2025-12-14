@@ -8,36 +8,36 @@ const testimonials = [
     name: "Afeefa Abbas MV",
     role: "Agricultural Engineer",
     img: "https://i.pravatar.cc/100?img=1",
-    text: "I recently completed a 6-week workshop on Landscape Designing from Meraki Design Studio. The program helped me gain valuable knowledge in AutoCAD, SketchUp, Lumion and design detailing."
+    text: "I recently completed a 6-week workshop on Landscape Designing from Meraki Design Studio. The program helped me gain valuable knowledge in AutoCAD, SketchUp, Lumion and design detailing.",
   },
   {
     id: 2,
     name: "Clara Jamson",
     role: "BSc(Horticulture)",
     img: "https://i.pravatar.cc/100?img=2",
-    text: "I had a wonderful experience with Meraki Design Studio. Their lessons covered everything from basics to advanced levels, making landscape design easy to learn."
+    text: "I had a wonderful experience with Meraki Design Studio. Their lessons covered everything from basics to advanced levels, making landscape design easy to learn.",
   },
   {
     id: 3,
     name: "Manish Kumar",
     role: "Landscape Designer",
     img: "https://i.pravatar.cc/100?img=3",
-    text: "The workshop boosted my design confidence. Practical sessions and software training were the best part."
+    text: "The workshop boosted my design confidence. Practical sessions and software training were the best part.",
   },
   {
     id: 4,
     name: "Sana Rahman",
     role: "Architect",
     img: "https://i.pravatar.cc/100?img=4",
-    text: "Amazing team, amazing training! I learned how to convert ideas into real landscape concepts."
+    text: "Amazing team, amazing training! I learned how to convert ideas into real landscape concepts.",
   },
   {
     id: 5,
     name: "John Mathew",
     role: "Civil Engineer",
     img: "https://i.pravatar.cc/100?img=5",
-    text: "Very detailed and well-structured. Highly recommended for beginners and professionals."
-  }
+    text: "Very detailed and well-structured. Highly recommended for beginners and professionals.",
+  },
 ];
 
 const Testimonials = () => {
@@ -60,7 +60,7 @@ const Testimonials = () => {
 
       {/* Batch Dropdown */}
       <div className="flex justify-center mt-6">
-        <select className="border rounded-md px-4 py-2 text-sm">
+        <select className="w-48 border border-gray-300 rounded-lg px-4 py-2 text-sm text-gray-700 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-gray-400">
           <option>All Batch</option>
           <option>Batch 1</option>
           <option>Batch 2</option>
@@ -87,12 +87,25 @@ const Testimonials = () => {
         {/* Cards Scroll Container */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-10 py-4"
+          className="flex gap-6 overflow-hidden scrollbar-hide scroll-smooth px-10 py-4"
         >
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="min-w-[380px] bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition"
+              className="
+        min-w-[380px]
+        h-[260px]
+        bg-white
+        border
+        border-gray-200
+        rounded-xl
+        p-6
+        shadow-sm
+        hover:shadow-md
+        transition
+        flex
+        flex-col
+      "
             >
               {/* Profile */}
               <div className="flex items-center gap-3">
@@ -102,18 +115,18 @@ const Testimonials = () => {
                   alt={t.name}
                 />
                 <div>
-                  <h4 className="font-semibold">{t.name}</h4>
+                  <h4 className="font-semibold text-gray-900">{t.name}</h4>
                   <p className="text-sm text-gray-500">{t.role}</p>
                 </div>
               </div>
 
               {/* Text */}
-              <p className="text-sm text-gray-700 mt-3 leading-relaxed">
+              <p className="text-sm text-gray-700 mt-3 leading-relaxed text-left">
                 {t.text}
               </p>
 
-              {/* Icons */}
-              <div className="flex gap-4 mt-4 text-gray-600">
+              {/* Icons (STAYS AT BOTTOM) */}
+              <div className="flex gap-4 mt-auto text-gray-600">
                 <FaLinkedin className="cursor-pointer hover:text-green-700" />
                 <FaInstagram className="cursor-pointer hover:text-green-700" />
               </div>
@@ -123,11 +136,11 @@ const Testimonials = () => {
       </div>
 
       {/* See More */}
-      <div className="text-center mt-6">
+      {/* <div className="text-center mt-6">
         <button className="text-green-700 font-medium hover:underline">
           See More
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
