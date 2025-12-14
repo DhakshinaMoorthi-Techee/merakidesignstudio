@@ -1,7 +1,11 @@
 import "./App.css";
 import AboutFounder from "./components/AboutFounder";
+import CareerCta from "./components/CareerCta";
+import FaqSection from "./components/FaqSection";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Questions from "./components/Questions";
 import SuccessStories from "./components/SuccessStories";
 import TeamSection from "./components/TeamSection";
 import Testimonials from "./components/Testimonials";
@@ -23,6 +27,10 @@ function App() {
       <AboutFounder/>
       <TeamSection/>
       <Testimonials/>
+      <FaqSection/>
+      <Questions/>
+      <CareerCta/>
+      <Footer/>
     </div>
   );
 }
