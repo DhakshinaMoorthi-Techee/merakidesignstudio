@@ -49,7 +49,7 @@ export default function FaqSection() {
     <section className="max-w-5xl mx-auto px-6 py-20">
       {/* Header */}
       <div className="text-center mb-14">
-        <p className="text-green-700 font-semibold tracking-wide uppercase">
+        <p className="text-green-700 text-xl tracking-wide uppercase">
           FAQ
         </p>
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mt-2">

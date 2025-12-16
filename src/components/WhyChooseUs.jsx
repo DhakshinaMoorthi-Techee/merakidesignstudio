@@ -1,17 +1,22 @@
+import { GoLightBulb } from "react-icons/go";
+import { LuHandshake, LuShapes } from "react-icons/lu";
+import { PiHandFist, PiPlant } from "react-icons/pi";
+import { RiBookShelfLine } from "react-icons/ri";
+
 export default function WhyChooseUs() {
   const featuresTop = [
     {
-      icon: "🧪",
+      icon: <PiHandFist />,
       title: "Hands-on Learning",
       desc: "Every session is built around practice, not just lectures. You'll design, experiment, and build confidence through real projects.",
     },
     {
-      icon: "⚖️",
+      icon: <LuShapes />,
       title: "Expert Mentorship",
       desc: "Our instructors are practicing designers and landscape professionals who bring practical insights, not just textbook knowledge.",
     },
     {
-      icon: "📚",
+      icon: <RiBookShelfLine />,
       title: "Comprehensive Curriculum",
       desc: "From plant science and spatial design to software mastery — AutoCAD, SketchUp, Lumion, Photoshop, QGIS — we cover every essential skill.",
     },
@@ -19,24 +24,24 @@ export default function WhyChooseUs() {
 
   const featuresBottom = [
     {
-      icon: "💡",
+      icon: <GoLightBulb />,
       title: "Creative Environment",
       desc: "We encourage exploration, discussion, and collaboration. Every idea is valued, every voice heard.",
     },
     {
-      icon: "🌿",
+      icon: <LuHandshake />,
       title: "Focus on Sustainability",
       desc: "Our workshops emphasize designing with nature, not against it — teaching methods that balance aesthetics with environmental responsibility.",
     },
     {
-      icon: "📈",
+      icon: <PiPlant />,
       title: "Career Growth",
       desc: "Whether you're a student, architect, or enthusiast, our programs equip you with skills and a portfolio that stand out in the design world.",
     },
   ];
 
   return (
-    <section className="w-7xl bg-white pt-20 pb-24 m-auto">
+    <section className="w-7xl bg-white pt-20 pb-16 m-auto">
       {/* ---- Heading ---- */}
       <div className="text-center mb-16">
         <h4 className="text-[#1F7F4C] text-lg font-medium tracking-wide">
@@ -59,11 +64,11 @@ export default function WhyChooseUs() {
                   {item.icon}
                 </div>
 
-                <div>
+                <div className="text-left">
                   <h3 className="font-semibold text-[17px] text-gray-900">
                     {item.title}
                   </h3>
-                  <p className="text-[15px] leading-relaxed text-gray-600 mt-1">
+                  <p className="text-[15px] leading-relaxed text-gray-500 mt-1">
                     {item.desc}
                   </p>
                 </div>
@@ -89,11 +94,11 @@ export default function WhyChooseUs() {
                   {item.icon}
                 </div>
 
-                <div>
+                <div className="text-left">
                   <h3 className="font-semibold text-[17px] text-gray-900">
                     {item.title}
                   </h3>
-                  <p className="text-[15px] leading-relaxed text-gray-600 mt-1">
+                  <p className="text-[15px] leading-relaxed text-gray-500 mt-1">
                     {item.desc}
                   </p>
                 </div>
@@ -110,7 +115,7 @@ export default function WhyChooseUs() {
 
       {/* ---- Curriculum Section ---- */}
       <div className="mt-24 text-center">
-        <h4 className="text-[#1F7F4C] text-lg font-medium">Curriculum</h4>
+        <h4 className="text-[#1F7F4C] text-xl font-medium">Curriculum</h4>
 
         <h2 className="mt-2 text-[32px] md:text-[36px] font-semibold text-[#111]">
           What you’ll learn in this <br /> Workshop

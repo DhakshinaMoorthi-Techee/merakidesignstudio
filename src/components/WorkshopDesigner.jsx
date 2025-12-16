@@ -1,9 +1,7 @@
-import {
-  FaVideo,
-  FaHandHolding,
-  FaUserTie,
-  FaCheckCircle,
-} from "react-icons/fa";
+import { FaVideo, FaCheckCircle, FaGraduationCap } from "react-icons/fa";
+import CareerCover from "../assets/images/career-cover.jpg";
+import { MdFrontHand } from "react-icons/md";
+import { LuArrowRight } from "react-icons/lu";
 
 export default function WorkshopSection() {
   return (
@@ -17,8 +15,11 @@ export default function WorkshopSection() {
       {/* Top Cards */}
       <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-6 max-w-6xl mx-auto">
         {/* Card */}
-        <div className="w-full md:w-1/3 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl p-8 border border-gray-100">
-          <FaVideo className="text-green-600 text-3xl mb-4" />
+        <div className="text-left w-full md:w-1/3 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl p-6 border border-gray-200">
+          <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center mb-4">
+            <FaVideo className="text-white text-xl" />
+          </div>
+
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Online Learning
           </h3>
@@ -29,8 +30,10 @@ export default function WorkshopSection() {
         </div>
 
         {/* Card */}
-        <div className="w-full md:w-1/3 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl p-8 border border-gray-100">
-          <FaHandHolding className="text-green-600 text-3xl mb-4" />
+        <div className="text-left w-full md:w-1/3 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl p-6 border border-gray-200">
+          <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center mb-4">
+            <MdFrontHand className="text-white text-xl" />
+          </div>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Hands-on Projects
           </h3>
@@ -41,8 +44,10 @@ export default function WorkshopSection() {
         </div>
 
         {/* Card */}
-        <div className="w-full md:w-1/3 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl p-8 border border-gray-100">
-          <FaUserTie className="text-green-600 text-3xl mb-4" />
+        <div className="text-left w-full md:w-1/3 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-2xl p-6 border border-gray-200">
+          <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center mb-4">
+            <FaGraduationCap className="text-white text-xl" />
+          </div>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Dedicated Mentorship
           </h3>
@@ -54,13 +59,13 @@ export default function WorkshopSection() {
       </div>
 
       {/* Bottom Section */}
-      <div className="mt-16 max-w-6xl mx-auto bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-3xl p-10 border border-gray-100 flex flex-col md:flex-row items-center gap-10">
+      <div className="mt-6 max-w-6xl mx-auto bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] rounded-3xl p-10 border border-gray-200 flex flex-col md:flex-row items-center gap-10">
         {/* Left Image */}
         <div className="w-full md:w-[25%] flex justify-center">
-          <div className="rounded-[28px] overflow-hidden bg-white p-3 shadow-sm border border-gray-100">
+          <div className="rounded-[10px] overflow-hidden bg-white shadow-sm border border-gray-200">
             <img
-              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=700&q=80"
-              className="w-[260px] h-[360px] object-cover rounded-[20px]"
+              src={CareerCover}
+              className="w-[260px] h-[360px] object-cover rounded-[10px]"
               alt="Workshop"
             />
           </div>
@@ -79,7 +84,7 @@ export default function WorkshopSection() {
               "Develop a strong design portfolio that reflects your creativity and practical skills.",
             ].map((text, i) => (
               <li key={i} className="flex gap-3 items-start">
-                <FaCheckCircle className="text-green-600 text-lg mt-1" />
+                <FaCheckCircle className="text-green-800 text-lg mt-1" />
                 {text}
               </li>
             ))}
@@ -87,12 +92,16 @@ export default function WorkshopSection() {
 
           {/* Buttons */}
           <div className="flex gap-4 mt-8">
-            <button className="px-6 py-3 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition">
+            <button className="bg-green-900 text-white border px-6 py-3 rounded-lg text-md font-medium hover:bg-white hover:text-green-900 hover:border-green-900 transition duration-300 cursor-pointer">
               Register Now
             </button>
 
-            <button className="px-6 py-3 border border-gray-400 rounded-lg text-sm font-medium hover:bg-gray-50 transition flex items-center gap-2">
-              Weekly Syllabus →
+            <button className="group flex items-center gap-2 border border-gray-300 px-6 py-3 rounded-lg text-sm font-medium hover:border-green-900 transition cursor-pointer">
+              Weekly Syllabus
+              <LuArrowRight
+                size={16}
+                className="text-gray-600 transition-transform duration-300 group-hover:translate-x-1.5"
+              />
             </button>
           </div>
         </div>

@@ -46,32 +46,36 @@ export default function YouTubeCustomPlayer() {
   }, [player]);
 
   return (
-    <div className="w-7xl max-w-5xl m-auto mt-10 mb-16 px-4">
+    <div className="max-w-6xl m-auto mt-10 mb-16 px-4">
       {/* LANGUAGE SWITCHER */}
-      <div className="text-center my-8">
-        <p className="text-gray-700 mb-2 text-sm md:text-base">
+      <div className="text-center mt-8 mb-10">
+        <p className="text-gray-900 mb-2 text-sm md:text-base">
           Select Language:
         </p>
 
-        <div className="inline-flex items-center bg-gray-100 rounded-full px-2 py-1 gap-2">
+        <div className="inline-flex items-center bg-gray-100 rounded-full p-1 gap-1">
           <button
             onClick={() => setLanguage("English")}
-            className={`px-4 py-1 rounded-full text-sm md:text-base transition-all ${
-              language === "English"
-                ? "bg-[#0C3B2E] text-white"
-                : "text-gray-700 bg-transparent"
-            }`}
+            className={`px-5 py-1.5 rounded-full text-sm md:text-base font-medium
+        transition-all duration-500 cursor-pointer
+        ${
+          language === "English"
+            ? "bg-[#0C3B2E] text-white shadow-sm"
+            : "text-gray-700"
+        }`}
           >
             English
           </button>
 
           <button
             onClick={() => setLanguage("Tamil")}
-            className={`px-4 py-1 rounded-full text-sm md:text-base transition-all ${
-              language === "Tamil"
-                ? "bg-[#0C3B2E] text-white"
-                : "text-gray-700 bg-transparent"
-            }`}
+            className={`px-5 py-1.5 rounded-full text-sm md:text-base font-medium
+        transition-all duration-500 cursor-pointer
+        ${
+          language === "Tamil"
+            ? "bg-[#0C3B2E] text-white shadow-sm"
+            : "text-gray-700"
+        }`}
           >
             Tamil
           </button>
@@ -80,14 +84,26 @@ export default function YouTubeCustomPlayer() {
 
       {/* RESPONSIVE VIDEO WRAPPER (16:9 RATIO) */}
       <div className="relative w-full rounded-3xl overflow-hidden shadow-lg">
-        <div className="relative w-full pb-[56.25%]"> {/* maintains 16:9 ratio */}
-          <iframe
-            id="yt-player"
-            className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/OBt4Tw6nCvc?start=300&controls=0&modestbranding=1&rel=0&enablejsapi=1"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-          ></iframe>
+        <div className="relative w-full pb-[56.25%]">
+          {" "}
+          {/* maintains 16:9 ratio */}
+          {language === "Tamil" ? (
+            <iframe
+              id="yt-player"
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/OBt4Tw6nCvc?start=300&controls=0&modestbranding=1&rel=0&enablejsapi=1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <iframe
+              id="yt-player"
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/qd5F_LrrxNQ?start=300&controls=0&modestbranding=1&rel=0&enablejsapi=1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          )}
         </div>
 
         {/* CENTER PLAY/PAUSE BUTTON */}
@@ -95,8 +111,10 @@ export default function YouTubeCustomPlayer() {
           onClick={togglePlay}
           className="absolute inset-0 flex items-center justify-center"
         >
-          <div className="bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center 
-                          h-20 w-20 md:h-32 md:w-32 text-white">
+          <div
+            className="bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center 
+                          h-20 w-20 md:h-32 md:w-32 text-white"
+          >
             {isPlaying ? (
               <HiPause className="text-4xl md:text-6xl" />
             ) : (
@@ -107,7 +125,10 @@ export default function YouTubeCustomPlayer() {
 
         {/* BOTTOM VIDEO CONTROLS */}
         <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 md:gap-4">
-          <button onClick={togglePlay} className="text-white text-2xl md:text-3xl">
+          <button
+            onClick={togglePlay}
+            className="text-white text-2xl md:text-3xl"
+          >
             {isPlaying ? <HiPause /> : <HiPlay className="ml-1" />}
           </button>
 

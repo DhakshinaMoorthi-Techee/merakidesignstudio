@@ -5,6 +5,7 @@ import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import ProgramGrid from "./components/ProgramGrid";
 import Questions from "./components/Questions";
 import SuccessStories from "./components/SuccessStories";
 import TeamSection from "./components/TeamSection";
@@ -18,12 +19,13 @@ function App() {
   return (
     <div className="poppins-regular">
       <Navbar/>
-      {/* <Hero/> */}
+      <Hero/>
       <ToolsSection/>
       <VideoSection/>
       <SuccessStories/>
       <WorkshopSection/>
       <WhyChooseUs/>
+      <ProgramGrid/>
       <AboutFounder/>
       <TeamSection/>
       <Testimonials/>
