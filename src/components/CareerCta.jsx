@@ -3,7 +3,7 @@ import CareerCover from "../assets/images/career-cover.jpg";
 
 export default function CareerCta() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
+    <section className="max-w-5xl mx-auto px-6 py-16">
       {/* Heading */}
       <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-900 mb-14">
         Let's Scale Up Your Creative <br /> Career
@@ -17,7 +17,7 @@ export default function CareerCta() {
         {/* Right Content */}
         <div className="space-y-6">
           {/* Image */}
-          <div className="rounded-2xl overflow-hidden max-h-sm">
+          <div className="rounded-2xl overflow-hidden" style={{height:"550px"}}>
             <img
               src={CareerCover}
               alt="Landscape design work"

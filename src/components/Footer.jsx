@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
           {/* Left */}
-          <div className="space-y-10 bg-white rounded-2xl py-2 px-2">
+          <div className="space-y-10 bg-white rounded-2xl py-2">
             {/* Logo */}
             <div className="flex items-center gap-2">
               <img

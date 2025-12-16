@@ -5,7 +5,7 @@ import Avatar3 from "../assets/images/avatar3.png";
 export default function Questions() {
   return (
     <section className="max-w-5xl mx-auto px-6 pb-24">
-      <div className="bg-gray-100 rounded-2xl py-8 px-6 text-center shadow-sm">
+      <div className="bg-gray-50 rounded-2xl py-8 px-6 text-center shadow-sm">
         {/* Avatars */}
         <div className="flex justify-center -space-x-3 mb-6">
           <img

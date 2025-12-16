@@ -6,7 +6,7 @@ import Lumion from "../assets/images/lumion-logo.webp";
 
 export default function ToolsSection() {
   return (
-    <section className="text-center pt-30 pb-20 bg-white px-4 md:px-10 w-7xl m-auto">
+    <section className="text-center pt-16 pb-20 bg-white px-4 md:px-10 w-7xl m-auto">
       <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
         You’ll Learn Tools Like
       </h2>
