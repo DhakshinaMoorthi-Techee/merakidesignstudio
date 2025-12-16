@@ -53,13 +53,16 @@ const Testimonials = () => {
   return (
     <div className="w-7xl px-6 md:px-16 py-12 m-auto">
       {/* Header */}
-      <h3 className="text-center text-green-700 font-medium">Testimonials</h3>
+      <h3 className="text-center text-green-700 font-medium text-xl">
+        Testimonials
+      </h3>
       <h2 className="text-center text-3xl font-bold mt-1">
         What Our Students Says
       </h2>
 
       {/* Batch Dropdown */}
-      <div className="flex justify-center mt-6">
+      <div className="flex flex-col items-center mt-6">
+        <label className="mb-2">Select Batch:</label>
         <select className="w-48 border border-gray-300 rounded-lg px-4 py-2 text-sm text-gray-700 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-gray-400">
           <option>All Batch</option>
           <option>Batch 1</option>
@@ -92,20 +95,7 @@ const Testimonials = () => {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="
-        min-w-[380px]
-        h-[260px]
-        bg-white
-        border
-        border-gray-200
-        rounded-xl
-        p-6
-        shadow-sm
-        hover:shadow-md
-        transition
-        flex
-        flex-col
-      "
+              className="min-w-[500px] h-[260px] bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition flex flex-col"
             >
               {/* Profile */}
               <div className="flex items-center gap-3">
@@ -126,9 +116,9 @@ const Testimonials = () => {
               </p>
 
               {/* Icons (STAYS AT BOTTOM) */}
-              <div className="flex gap-4 mt-auto text-gray-600">
-                <FaLinkedin className="cursor-pointer hover:text-green-700" />
-                <FaInstagram className="cursor-pointer hover:text-green-700" />
+              <div className="flex gap-4 mt-auto text-gray-400">
+                <FaLinkedin className="cursor-pointer hover:text-green-700 text-xl" />
+                <FaInstagram className="cursor-pointer hover:text-green-700 text-xl" />
               </div>
             </div>
           ))}

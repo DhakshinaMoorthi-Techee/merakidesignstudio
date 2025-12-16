@@ -1,24 +1,26 @@
+import { FaQuoteLeft } from "react-icons/fa";
+
 export default function AboutFounder() {
   return (
-    <section className="w-7xl bg-white py-14 px-6 m-auto">
+    <section className="w-6xl bg-white py-14 px-6 m-auto">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
         
         {/* LEFT TEXT SECTION */}
         <div className="text-gray-800 text-left">
           {/* Quote Icon */}
-          <div className="text-[#1F7F4C] text-4xl mb-4">❝</div>
+          <div className="text-[#1F7F4C] text-4xl mb-4"><FaQuoteLeft /></div>
 
           <h2 className="text-[22px] font-semibold text-gray-900 mb-6">
             ABOUT THE FOUNDER
           </h2>
 
-          <p className="text-[15px] leading-relaxed text-gray-700 mb-5">
+          <p className="text-[18px] leading-relaxed text-gray-500 mb-5">
             I am A. Dhanapriya, the founder of Meraki Design Studio—a space where 
             creativity, nature, and technical excellence come together to craft 
             meaningful landscape experiences.
           </p>
 
-          <p className="text-[15px] leading-relaxed text-gray-700">
+          <p className="text-[18px] leading-relaxed text-gray-500">
             My journey began with a Bachelor of Science in Agriculture, which gave 
             me a strong foundation in plant science, soil behavior, irrigation systems, 
             and environmental management. With this scientific knowledge and a deep 

@@ -12,28 +12,58 @@ export default function ToolsSection() {
       </h2>
 
       {/* Row 1 */}
-      <div className="flex flex-wrap justify-center gap-16 md:gap-32 mt-14">
+      <div className="flex flex-wrap justify-center gap-16 md:gap-32 mt-20">
         <div className="flex flex-col items-center gap-3">
-          <img src={SketchUp} alt="SketchUp" className="h-16 md:h-24 object-contain" />
+          <img
+            src={SketchUp}
+            alt="SketchUp"
+            className="h-16 md:h-24 object-contain cursor-pointer
+             transition-transform duration-300 ease-out
+             hover:scale-110"
+          />
         </div>
 
         <div className="flex flex-col items-center gap-3">
-          <img src={Photoshop} alt="Photoshop" className="h-16 md:h-24 object-contain" />
+          <img
+            src={Photoshop}
+            alt="Photoshop"
+            className="h-16 md:h-24 object-contain cursor-pointer
+             transition-transform duration-300 ease-out
+             hover:scale-110"
+          />
         </div>
       </div>
 
       {/* Row 2 */}
       <div className="flex flex-wrap justify-center gap-16 md:gap-32 mt-14">
         <div className="flex flex-col items-center gap-3">
-          <img src={Autocad} alt="AutoCAD" className="h-16 md:h-24 object-contain" />
+          <img
+            src={Autocad}
+            alt="AutoCAD"
+            className="h-16 md:h-24 object-contain cursor-pointer
+             transition-transform duration-300 ease-out
+             hover:scale-110"
+          />
         </div>
 
         <div className="flex flex-col items-center gap-3">
-          <img src={Qgis} alt="QGIS" className="h-16 md:h-24 object-contain" />
+          <img
+            src={Qgis}
+            alt="QGIS"
+            className="h-16 md:h-24 object-contain cursor-pointer
+             transition-transform duration-300 ease-out
+             hover:scale-110"
+          />
         </div>
 
         <div className="flex flex-col items-center gap-3">
-          <img src={Lumion} alt="Lumion" className="h-16 md:h-24 object-contain" />
+          <img
+            src={Lumion}
+            alt="Lumion"
+            className="h-16 md:h-24 object-contain cursor-pointer
+             transition-transform duration-300 ease-out
+             hover:scale-110"
+          />
         </div>
       </div>
     </section>

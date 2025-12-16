@@ -10,11 +10,11 @@ export default function ProgramCard({ data, onClick }) {
         <img
           src={data.image}
           alt={data.title}
-          className="h-52 w-full object-cover transition group-hover:scale-105"
+          className="h-60 w-full object-cover transition group-hover:scale-105"
         />
       </div>
 
-      <p className="text-xs text-green-800 font-medium mb-1">
+      <p className="text-sm text-green-800 font-medium mb-1">
         {data.week}
       </p>
 

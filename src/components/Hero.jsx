@@ -11,7 +11,7 @@ import { HiOutlineTrophy } from "react-icons/hi2";
 
 export default function Hero() {
   return (
-    <section className="max-w-[85%] relative mx-auto px-9 pt-45 pb-20">
+    <section className="max-w-[90%] relative mx-auto px-9 pt-45 pb-20">
       <div className="grid lg:grid-cols-2 gap-10 items-center text-left">
         {/* LEFT CONTENT */}
         <div>
@@ -39,13 +39,16 @@ export default function Hero() {
 
           {/* CTA buttons */}
           <div className="flex items-center gap-4 mt-5">
-            <button className="bg-green-800 text-white px-6 py-3 rounded-lg text-md font-medium hover:bg-green-900 transition cursor-pointer">
+            <button className="bg-green-900 text-white border px-6 py-3 rounded-lg text-md font-medium hover:bg-white hover:text-green-900 hover:border-green-900 transition duration-300 cursor-pointer">
               Register Now
             </button>
 
-            <button className="flex items-center gap-2 border border-gray-300 px-6 py-3 rounded-lg text-sm font-medium hover:border-green-700 transition cursor-pointer">
+            <button className="group flex items-center gap-2 border border-gray-300 px-6 py-3 rounded-lg text-sm font-medium hover:border-green-900 transition cursor-pointer">
               Weekly Syllabus
-              <LuArrowRight size={16} className="text-gray-600" />
+              <LuArrowRight
+                size={16}
+                className="text-gray-600 transition-transform duration-300 group-hover:translate-x-1.5"
+              />
             </button>
           </div>
 
@@ -75,7 +78,7 @@ export default function Hero() {
               alt="Workshop"
               className="rounded-2xl h-[260px] w-full object-cover"
             />
-            <div className="bg-white rounded-xl border border-gray-200 shadow-md p-4">
+            <div className="bg-white rounded-xl border border-gray-200 shadow-md p-7">
               {/* Avatars */}
               <div className="flex -space-x-2 mb-2">
                 <img
@@ -118,7 +121,7 @@ export default function Hero() {
           {/* TESTIMONIAL CARD */}
 
           {/* CURVED ARROW + TEXT */}
-          <div className="absolute bottom-[-15px] left-[-63px] flex items-end gap-3">
+          <div className="absolute bottom-[-25px] left-[-70px] flex items-end gap-3">
             {/* Curved Arrow */}
             <svg
               width="83"

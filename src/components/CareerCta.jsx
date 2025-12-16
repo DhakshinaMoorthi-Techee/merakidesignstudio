@@ -26,10 +26,10 @@ export default function CareerCta() {
           </div>
 
           {/* WhatsApp CTA */}
-          <div className="border border-gray-200 rounded-xl p-6">
-            <h4 className="font-semibold text-gray-900 mb-2">
+          <div className="border border-gray-200 rounded-xl p-4 text-left">
+            <h3 className="font-semibold text-gray-900 mb-2">
               Join Our Community
-            </h4>
+            </h3>
             <p className="text-sm text-gray-500 mb-4">
               Connect with us on WhatsApp for workshop updates and
               sustainability tips.
@@ -38,7 +38,7 @@ export default function CareerCta() {
             <a
               href="https://wa.me/XXXXXXXXXX"
               target="_blank"
-              className="inline-flex justify-center w-full rounded-lg border border-green-800 text-green-800 py-3 font-medium hover:bg-green-50 transition"
+              className="inline-flex justify-center w-full rounded-lg border border-green-800 text-green-800 py-3 font-medium hover:bg-green-800 hover:text-white transition"
             >
               Join WhatsApp Group
             </a>

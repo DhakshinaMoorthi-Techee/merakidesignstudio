@@ -27,14 +27,14 @@ export default function Navbar() {
                 {item}{" "}
                 {item == "Products" && (
                   <span>
-                    <LuChevronDown size={20}/>
+                    <LuChevronDown size={20} />
                   </span>
                 )}
               </div>
             </li>
           ))}
 
-          <button className="bg-green-900 text-white font-normal px-4 py-2 rounded-lg hover:bg-green-700 transition cursor-pointer">
+          <button className="bg-green-900 text-white font-normal px-4 py-2 rounded-lg hover:bg-white hover:text-green-900 hover:border hover:border-green-900 transition duration-300 cursor-pointer">
             Register Now
           </button>
         </ul>
@@ -64,7 +64,7 @@ export default function Navbar() {
             </li>
           ))}
 
-          <button className="bg-green-900 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition w-fit cursor-pointer">
+          <button className="bg-green-900 text-white px-4 py-2 rounded-lg  hover:bg-white hover:text-green-900 hover:border hover:border-green-900 transition duration-300 w-fit cursor-pointer">
             Register Now
           </button>
         </ul>

@@ -90,7 +90,7 @@ export default function TeamSection() {
         ))}
       </div>
 
-      <button className="mt-12 text-green-700 underline text-sm hover:text-green-900">
+      <button className="mt-12 text-green-700 underline text-sm hover:text-green-900 cursor-pointer">
         See More
       </button>
     </div>
