@@ -177,3 +177,6 @@ button:focus-visible {
   font-style: italic;
 }
 
+button {
+  cursor: pointer;
+}

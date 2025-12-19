@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp, stagger } from "../data/animations";
+
 import SketchUp from "../assets/images/sketchup-logo.png";
 import Photoshop from "../assets/images/photoshop-logo.png";
 import Autocad from "../assets/images/autocad-logo.png";
@@ -6,66 +9,52 @@ import Lumion from "../assets/images/lumion-logo.webp";
 
 export default function ToolsSection() {
   return (
-    <section className="text-center pt-16 pb-20 bg-white px-4 md:px-10 w-7xl m-auto">
-      <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
+    <motion.section
+      className="text-center pt-16 pb-20 bg-white px-4 md:px-10 max-w-7xl m-auto"
+      variants={stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      {/* Title */}
+      <motion.h2
+        variants={fadeUp}
+        className="text-3xl md:text-4xl font-semibold text-gray-800"
+      >
         You’ll Learn Tools Like
-      </h2>
+      </motion.h2>
 
       {/* Row 1 */}
-      <div className="flex flex-wrap justify-center gap-16 md:gap-32 mt-20">
-        <div className="flex flex-col items-center gap-3">
-          <img
-            src={SketchUp}
-            alt="SketchUp"
+      <motion.div
+        variants={stagger}
+        className="flex flex-wrap justify-center gap-16 md:gap-32 mt-20"
+      >
+        {[SketchUp, Photoshop].map((logo, i) => (
+          <motion.img
+            key={i}
+            variants={fadeUp}
+            src={logo}
             className="h-16 md:h-24 object-contain cursor-pointer
-             transition-transform duration-300 ease-out
-             hover:scale-110"
+              transition-transform duration-300 ease-out hover:scale-110"
           />
-        </div>
-
-        <div className="flex flex-col items-center gap-3">
-          <img
-            src={Photoshop}
-            alt="Photoshop"
-            className="h-16 md:h-24 object-contain cursor-pointer
-             transition-transform duration-300 ease-out
-             hover:scale-110"
-          />
-        </div>
-      </div>
+        ))}
+      </motion.div>
 
       {/* Row 2 */}
-      <div className="flex flex-wrap justify-center gap-16 md:gap-32 mt-14">
-        <div className="flex flex-col items-center gap-3">
-          <img
-            src={Autocad}
-            alt="AutoCAD"
+      <motion.div
+        variants={stagger}
+        className="flex flex-wrap justify-center gap-16 md:gap-32 mt-14"
+      >
+        {[Autocad, Qgis, Lumion].map((logo, i) => (
+          <motion.img
+            key={i}
+            variants={fadeUp}
+            src={logo}
             className="h-16 md:h-24 object-contain cursor-pointer
-             transition-transform duration-300 ease-out
-             hover:scale-110"
+              transition-transform duration-300 ease-out hover:scale-110"
           />
-        </div>
-
-        <div className="flex flex-col items-center gap-3">
-          <img
-            src={Qgis}
-            alt="QGIS"
-            className="h-16 md:h-24 object-contain cursor-pointer
-             transition-transform duration-300 ease-out
-             hover:scale-110"
-          />
-        </div>
-
-        <div className="flex flex-col items-center gap-3">
-          <img
-            src={Lumion}
-            alt="Lumion"
-            className="h-16 md:h-24 object-contain cursor-pointer
-             transition-transform duration-300 ease-out
-             hover:scale-110"
-          />
-        </div>
-      </div>
-    </section>
+        ))}
+      </motion.div>
+    </motion.section>
   );
 }
