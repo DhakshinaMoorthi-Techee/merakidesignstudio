@@ -1,128 +1,127 @@
+import { motion } from "framer-motion";
+import { fadeUp, fadeIn, scaleIn, stagger } from "../data/animations";
 import { LuArrowRight, LuBadgeCheck } from "react-icons/lu";
+import { HiOutlineVideoCamera, HiOutlineTrophy } from "react-icons/hi2";
+
 import Banner1 from "../assets/images/banner1.jpg";
 import Banner2 from "../assets/images/banner2.jpg";
 import BannerAvatar1 from "../assets/images/banneravatar1.jpg";
 import BannerAvatar2 from "../assets/images/banneravatar2.jpg";
 import BannerAvatar3 from "../assets/images/banneravatar3.jpg";
 import BannerAvatar4 from "../assets/images/banneravatar4.jpg";
-import { BsCameraVideo } from "react-icons/bs";
-import { HiOutlineVideoCamera } from "react-icons/hi";
-import { HiOutlineTrophy } from "react-icons/hi2";
 
 export default function Hero() {
   return (
-    <section className="max-w-[90%] relative mx-auto px-9 pt-45 pb-20">
+    <section className="max-w-7xl relative mx-auto px-9 pt-45 pb-20">
       <div className="grid lg:grid-cols-2 gap-10 items-center text-left">
         {/* LEFT CONTENT */}
-        <div>
-          {/* Top notice */}
-          <p className="text-sm text-gray-800 mb-4">
+        <motion.div variants={stagger} initial="hidden" animate="visible">
+          <motion.p variants={fadeUp} className="text-sm text-gray-800 mb-4">
             Next Batch Starts December 15,{" "}
             <span className="text-green-800 font-medium underline cursor-pointer">
               Register Now
             </span>
-          </p>
+          </motion.p>
 
-          {/* Main heading */}
-          <h1 className="text-[52px] leading-[1.1] font-semibold text-gray-900">
+          <motion.h1
+            variants={fadeUp}
+            className="text-[60px] leading-[1.1] font-semibold text-gray-900"
+          >
             Master the art of <br />
             Landscape Design
-          </h1>
+          </motion.h1>
 
-          {/* Sub heading */}
-          <p
-            className="mt-1 text-[52px] font-bold text-green-800 italic text-left"
+          <motion.p
+            variants={fadeUp}
+            className="mt-1 text-[58px] font-bold text-green-800 italic"
             style={{ fontFamily: "Caveat" }}
           >
             8 Weeks Training Workshop
-          </p>
+          </motion.p>
 
-          {/* CTA buttons */}
-          <div className="flex items-center gap-4 mt-5">
-            <button className="bg-green-900 text-white border px-6 py-3 rounded-lg text-md font-medium hover:bg-white hover:text-green-900 hover:border-green-900 transition duration-300 cursor-pointer">
+          {/* CTA */}
+          <motion.div variants={fadeUp} className="flex gap-4 mt-5">
+            <button className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 hover:border-green-900 border transition">
               Register Now
             </button>
 
-            <button className="group flex items-center gap-2 border border-gray-300 px-6 py-3 rounded-lg text-sm font-medium hover:border-green-900 transition cursor-pointer">
-              Weekly Syllabus
-              <LuArrowRight
-                size={16}
-                className="text-gray-600 transition-transform duration-300 group-hover:translate-x-1.5"
-              />
+            <button className="group flex items-center gap-2 border px-6 py-3 rounded-lg">
+              <span className="transition-transform group-hover:translate-x-2 flex items-center gap-3">
+                Weekly Syllabus
+                <LuArrowRight className="text-lg" />
+              </span>
             </button>
-          </div>
+          </motion.div>
 
           {/* Features */}
-          <div className="flex gap-10 mt-10 text-md text-gray-800">
+          <motion.div
+            variants={fadeUp}
+            className="flex gap-10 mt-10 text-md text-gray-800"
+          >
             <div className="flex items-center gap-2">
-              <HiOutlineVideoCamera size={24} className="text-green-900" />
-              <span>Online</span>
+              <HiOutlineVideoCamera className="text-green-900" size={24} />
+              Online
             </div>
             <div className="flex items-center gap-2">
-              <LuBadgeCheck size={24} className="text-green-900" />
-              <span>Hand-On</span>
+              <LuBadgeCheck className="text-green-900" size={24} />
+              Hand-On
             </div>
             <div className="flex items-center gap-2">
-              <HiOutlineTrophy size={24} className="text-green-900" />
-              <span>Certificate</span>
+              <HiOutlineTrophy className="text-green-900" size={24} />
+              Certificate
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* RIGHT CONTENT */}
-        <div className="relative flex gap-6 items-start">
-          {/* LEFT IMAGE */}
-          <div className="w-[48%] flex flex-col gap-5">
-            <img
-              src={Banner1}
-              alt="Workshop"
-              className="rounded-2xl h-[260px] w-full object-cover"
-            />
-            <div className="bg-white rounded-xl border border-gray-200 shadow-md p-7">
-              {/* Avatars */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          className="relative flex gap-6"
+        >
+          {/* Left image */}
+          <motion.div
+            variants={scaleIn}
+            className="w-[48%] flex flex-col gap-5"
+          >
+            <img src={Banner1} className="rounded-2xl h-[275px] object-cover" />
+
+            {/* Testimonial card */}
+            <motion.div
+              variants={fadeUp}
+              className="bg-white rounded-xl border border-gray-200 shadow-md p-5"
+            >
               <div className="flex -space-x-2 mb-2">
-                <img
-                  src={BannerAvatar1}
-                  className="w-8 h-8 rounded-full border"
-                />
-                <img
-                  src={BannerAvatar2}
-                  className="w-8 h-8 rounded-full border"
-                />
-                <img
-                  src={BannerAvatar3}
-                  className="w-8 h-8 rounded-full border"
-                />
-                <img
-                  src={BannerAvatar4}
-                  className="w-8 h-8 rounded-full border"
-                />
+                {[
+                  BannerAvatar1,
+                  BannerAvatar2,
+                  BannerAvatar3,
+                  BannerAvatar4,
+                ].map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    className="w-8 h-8 rounded-full border"
+                  />
+                ))}
               </div>
-
-              {/* Stars */}
-              <div className="flex text-yellow-400 text-lg mb-1">★★★★★</div>
-
-              <p className="text-sm text-gray-700 leading-snug text-left">
-                <span className="font-medium">20+ professionals</span> are
-                already ahead of you.
+              <div className="text-yellow-400 text-lg">★★★★★</div>
+              <p className="text-sm text-gray-700">
+                <strong>20+ professionals</strong> are already ahead of you.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* RIGHT IMAGE */}
-          <div className="w-[52%]">
-            <img
-              src={Banner2}
-              alt="Design drawing"
-              className="rounded-2xl h-[450px] w-full object-cover"
-            />
-          </div>
+          {/* Right image */}
+          <motion.div variants={scaleIn} className="w-[52%]">
+            <img src={Banner2} className="rounded-2xl h-[450px] object-cover" />
+          </motion.div>
 
-          {/* TESTIMONIAL CARD */}
-
-          {/* CURVED ARROW + TEXT */}
-          <div className="absolute bottom-[-25px] left-[-70px] flex items-end gap-3">
-            {/* Curved Arrow */}
+          {/* Curved arrow */}
+          <motion.div
+            variants={fadeIn}
+            className="absolute bottom-[-25px] left-[-70px] flex items-end gap-3"
+          >
             <svg
               width="83"
               height="116"
@@ -136,12 +135,11 @@ export default function Hero() {
               />
             </svg>
 
-            {/* Text */}
             <span className="text-sm text-green-800 italic underline cursor-pointer">
               See what our candidate says!
             </span>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

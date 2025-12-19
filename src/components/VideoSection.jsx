@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { HiPause, HiPlay } from "react-icons/hi";
+import { fadeUp, scaleIn } from "../data/animations";
+import { motion } from "framer-motion";
 
 export default function YouTubeCustomPlayer() {
   const [player, setPlayer] = useState(null);
@@ -46,9 +48,14 @@ export default function YouTubeCustomPlayer() {
   }, [player]);
 
   return (
-    <div className="max-w-6xl m-auto mt-10 mb-16 px-4">
+    <motion.div
+      className="max-w-7xl m-auto mt-10 mb-16 px-4"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
       {/* LANGUAGE SWITCHER */}
-      <div className="text-center mt-8 mb-10">
+      <motion.div variants={fadeUp} className="text-center mt-8 mb-10">
         <p className="text-gray-900 mb-2 text-sm md:text-base">
           Select Language:
         </p>
@@ -80,40 +87,39 @@ export default function YouTubeCustomPlayer() {
             Tamil
           </button>
         </div>
-      </div>
+      </motion.div>
 
-      {/* RESPONSIVE VIDEO WRAPPER (16:9 RATIO) */}
-      <div className="relative w-full rounded-3xl overflow-hidden shadow-lg">
+      {/* VIDEO CONTAINER */}
+      <motion.div
+        variants={scaleIn}
+        className="relative w-full rounded-3xl overflow-hidden shadow-lg"
+      >
         <div className="relative w-full pb-[56.25%]">
-          {" "}
-          {/* maintains 16:9 ratio */}
           {language === "Tamil" ? (
             <iframe
-              id="yt-player"
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/OBt4Tw6nCvc?start=300&controls=0&modestbranding=1&rel=0&enablejsapi=1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-            ></iframe>
+            />
           ) : (
             <iframe
-              id="yt-player"
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/qd5F_LrrxNQ?start=300&controls=0&modestbranding=1&rel=0&enablejsapi=1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+              allowFullScreen
+            />
           )}
         </div>
 
-        {/* CENTER PLAY/PAUSE BUTTON */}
-        <button
+        {/* CENTER PLAY BUTTON */}
+        <motion.button
           onClick={togglePlay}
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.95 }}
           className="absolute inset-0 flex items-center justify-center"
         >
           <div
             className="bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center 
-                          h-20 w-20 md:h-32 md:w-32 text-white"
+                      h-20 w-20 md:h-32 md:w-32 text-white"
           >
             {isPlaying ? (
               <HiPause className="text-4xl md:text-6xl" />
@@ -121,10 +127,13 @@ export default function YouTubeCustomPlayer() {
               <HiPlay className="text-4xl md:text-6xl ml-1" />
             )}
           </div>
-        </button>
+        </motion.button>
 
-        {/* BOTTOM VIDEO CONTROLS */}
-        <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 md:gap-4">
+        {/* BOTTOM CONTROLS */}
+        <motion.div
+          variants={fadeUp}
+          className="absolute bottom-4 left-4 right-4 flex items-center gap-3 md:gap-4"
+        >
           <button
             onClick={togglePlay}
             className="text-white text-2xl md:text-3xl"
@@ -132,15 +141,15 @@ export default function YouTubeCustomPlayer() {
             {isPlaying ? <HiPause /> : <HiPlay className="ml-1" />}
           </button>
 
-          {/* PROGRESS BAR */}
           <div className="flex-1 h-2 md:h-3 bg-white/40 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-white rounded-full transition-all"
-              style={{ width: `${progress}%` }}
-            ></div>
+            <motion.div
+              className="h-full bg-white rounded-full"
+              animate={{ width: `${progress}%` }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            />
           </div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }
