@@ -6,7 +6,7 @@ import { LuArrowDown, LuChevronDown, LuMoveDown } from "react-icons/lu";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const navItems = ["About", "Workshop", "Contact", "Products"];
+  const navItems = ["About", "Workshop", "Contact"];
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
