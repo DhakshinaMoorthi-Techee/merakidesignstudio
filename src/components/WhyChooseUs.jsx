@@ -152,6 +152,11 @@ export default function WhyChooseUs() {
           whileTap={{ scale: 0.95 }}
           className="mt-6 bg-[#1F7F4C] text-white px-6 py-2 rounded-md
                  hover:bg-[#166b3f] transition"
+          onClick={() =>
+            document
+              .getElementById("career")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
         >
           Register Now
         </motion.button>

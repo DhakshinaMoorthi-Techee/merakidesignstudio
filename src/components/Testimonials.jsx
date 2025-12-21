@@ -126,7 +126,7 @@ const Testimonials = () => {
               key={t.id}
               variants={fadeUp}
               whileHover={{ y: -6 }}
-              className="min-w-[500px] h-[260px] bg-white border border-gray-200
+              className="min-w-[500px] h-[260px] bg-white border border-green-200
                      rounded-xl p-6 shadow-sm hover:shadow-md
                      transition flex flex-col"
             >
@@ -137,9 +137,9 @@ const Testimonials = () => {
                   className="w-12 h-12 rounded-full object-cover"
                   alt={t.name}
                 />
-                <div>
-                  <h4 className="font-semibold text-gray-900">{t.name}</h4>
-                  <p className="text-sm text-gray-500">{t.role}</p>
+                <div className="text-left">
+                  <h4 className="font-semibold text-green-700">{t.name}</h4>
+                  <p className="text-sm text-gray-400">{t.role}</p>
                 </div>
               </div>
 

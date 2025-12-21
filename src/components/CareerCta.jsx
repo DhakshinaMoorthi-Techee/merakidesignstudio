@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function CareerCta() {
   return (
-    <section className="max-w-5xl mx-auto px-6 py-16">
+    <section id='contact' className="max-w-5xl mx-auto px-6 py-16">
       {/* Heading */}
       <motion.h2
         variants={fadeUp}
@@ -57,7 +57,7 @@ export default function CareerCta() {
             </p>
 
             <motion.a
-              href="https://wa.me/XXXXXXXXXX"
+              href="https://chat.whatsapp.com/KijnvK8Y5BeF0DMKWKQKyX"
               target="_blank"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
