@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AboutFounder() {
   return (
-    <section className="w-7xl bg-white py-14 px-6 m-auto">
+    <section id="about" className="w-7xl bg-white py-14 px-6 m-auto">
   <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
     
     {/* LEFT TEXT SECTION */}

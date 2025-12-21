@@ -112,6 +112,11 @@ export default function WorkshopSection() {
           {/* BUTTONS */}
           <motion.div variants={fadeUp} className="flex gap-4 mt-8">
             <button
+              onClick={() =>
+                document
+                  .getElementById("career")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="bg-green-900 text-white border px-6 py-3 rounded-lg
                            hover:bg-white hover:text-green-900 hover:border-green-900
                            transition duration-300"
@@ -120,6 +125,11 @@ export default function WorkshopSection() {
             </button>
 
             <button
+              onClick={() =>
+                document
+                  .getElementById("workshop")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="group flex items-center gap-2 border border-gray-300
                            px-6 py-3 rounded-lg hover:border-green-900 transition"
             >

@@ -6,7 +6,11 @@ import { LuArrowDown, LuChevronDown, LuMoveDown } from "react-icons/lu";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const navItems = ["About", "Workshop", "Contact"];
+  const navItems = [
+    { label: "About", id: "about" },
+    { label: "Workshop", id: "workshop" },
+    { label: "Contact", id: "contact" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
@@ -21,11 +25,15 @@ export default function Navbar() {
           {navItems.map((item, index) => (
             <li
               key={index}
+              onClick={() => {
+                const section = document.getElementById(item.id);
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="cursor-pointer hover:text-green-700 transition"
             >
               <div className="flex items-center gap-1">
-                {item}{" "}
-                {item == "Products" && (
+                {item.label}{" "}
+                {item.label == "Products" && (
                   <span>
                     <LuChevronDown size={20} />
                   </span>
@@ -34,7 +42,14 @@ export default function Navbar() {
             </li>
           ))}
 
-          <button className="bg-green-900 text-white font-normal px-4 py-2 rounded-lg hover:bg-white hover:text-green-900 hover:border hover:border-green-900 transition duration-300 cursor-pointer">
+          <button
+            onClick={() =>
+              document
+                .getElementById("career")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="bg-green-900 text-white font-normal px-4 py-2 rounded-lg hover:bg-white hover:text-green-900 hover:border hover:border-green-900 transition duration-300 cursor-pointer"
+          >
             Register Now
           </button>
         </ul>
@@ -58,13 +73,24 @@ export default function Navbar() {
           {navItems.map((item, index) => (
             <li
               key={index}
+              onClick={() => {
+                const section = document.getElementById(item.id);
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="cursor-pointer text-gray-700 hover:text-green-700 transition"
             >
-              {item}
+              {item.label}
             </li>
           ))}
 
-          <button className="bg-green-900 text-white px-4 py-2 rounded-lg  hover:bg-white hover:text-green-900 hover:border hover:border-green-900 transition duration-300 w-fit cursor-pointer">
+          <button
+            onClick={() =>
+              document
+                .getElementById("career")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="bg-green-900 text-white px-4 py-2 rounded-lg  hover:bg-white hover:text-green-900 hover:border hover:border-green-900 transition duration-300 w-fit cursor-pointer"
+          >
             Register Now
           </button>
         </ul>

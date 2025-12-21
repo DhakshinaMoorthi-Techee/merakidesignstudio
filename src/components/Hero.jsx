@@ -18,7 +18,14 @@ export default function Hero() {
         <motion.div variants={stagger} initial="hidden" animate="visible">
           <motion.p variants={fadeUp} className="text-sm text-gray-800 mb-4">
             Next Batch Starts December 15,{" "}
-            <span className="text-green-800 font-medium underline cursor-pointer">
+            <span
+              className="text-green-800 font-medium underline cursor-pointer"
+              onClick={() =>
+                document
+                  .getElementById("career")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Register Now
             </span>
           </motion.p>
@@ -41,11 +48,25 @@ export default function Hero() {
 
           {/* CTA */}
           <motion.div variants={fadeUp} className="flex gap-4 mt-5">
-            <button className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 hover:border-green-900 border transition">
+            <button
+              className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 hover:border-green-900 border transition"
+              onClick={() =>
+                document
+                  .getElementById("career")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Register Now
             </button>
 
-            <button className="group flex items-center gap-2 border px-6 py-3 rounded-lg">
+            <button
+              className="group flex items-center gap-2 border px-6 py-3 rounded-lg"
+              onClick={() =>
+                document
+                  .getElementById("workshop")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               <span className="transition-transform group-hover:translate-x-2 flex items-center gap-3">
                 Weekly Syllabus
                 <LuArrowRight className="text-lg" />
