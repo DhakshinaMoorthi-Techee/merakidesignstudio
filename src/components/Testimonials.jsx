@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { fadeIn, fadeUp, stagger } from "../data/animations";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -51,53 +53,84 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="w-7xl px-6 md:px-16 py-12 m-auto">
-      {/* Header */}
-      <h3 className="text-center text-green-700 font-medium text-xl">
+    <motion.div
+      className="w-7xl px-6 md:px-16 py-12 m-auto"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.25 }}
+    >
+      {/* HEADER */}
+      <motion.h3
+        variants={fadeUp}
+        className="text-center text-green-700 font-medium text-xl"
+      >
         Testimonials
-      </h3>
-      <h2 className="text-center text-3xl font-bold mt-1">
-        What Our Students Says
-      </h2>
+      </motion.h3>
 
-      {/* Batch Dropdown */}
-      <div className="flex flex-col items-center mt-6">
+      <motion.h2
+        variants={fadeUp}
+        className="text-center text-3xl font-bold mt-1"
+      >
+        What Our Students Says
+      </motion.h2>
+
+      {/* BATCH DROPDOWN */}
+      <motion.div variants={fadeUp} className="flex flex-col items-center mt-6">
         <label className="mb-2">Select Batch:</label>
-        <select className="w-48 border border-gray-300 rounded-lg px-4 py-2 text-sm text-gray-700 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-gray-400">
+        <select
+          className="w-48 border border-gray-300 rounded-lg px-4 py-2 text-sm
+                       text-gray-700 bg-white shadow-sm
+                       focus:outline-none focus:ring-2 focus:ring-gray-200"
+        >
           <option>All Batch</option>
           <option>Batch 1</option>
           <option>Batch 2</option>
           <option>Batch 3</option>
         </select>
-      </div>
+      </motion.div>
 
-      {/* Scroll Buttons */}
-      <div className="relative mt-10">
-        <button
+      {/* SLIDER */}
+      <motion.div variants={fadeIn} className="relative mt-10">
+        {/* LEFT BUTTON */}
+        <motion.button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hover:bg-gray-100 cursor-pointer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="absolute left-0 top-1/2 -translate-y-1/2
+                 bg-white shadow-md p-3 rounded-full z-10
+                 hover:bg-gray-100 cursor-pointer"
         >
           <FiChevronLeft size={22} />
-        </button>
+        </motion.button>
 
-        <button
+        {/* RIGHT BUTTON */}
+        <motion.button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hover:bg-gray-100 cursor-pointer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="absolute right-0 top-1/2 -translate-y-1/2
+                 bg-white shadow-md p-3 rounded-full z-10
+                 hover:bg-gray-100 cursor-pointer"
         >
           <FiChevronRight size={22} />
-        </button>
+        </motion.button>
 
-        {/* Cards Scroll Container */}
-        <div
+        {/* CARDS CONTAINER */}
+        <motion.div
           ref={scrollRef}
           className="flex gap-6 overflow-hidden scrollbar-hide scroll-smooth px-10 py-4"
+          variants={stagger}
         >
           {testimonials.map((t) => (
-            <div
+            <motion.div
               key={t.id}
-              className="min-w-[500px] h-[260px] bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition flex flex-col"
+              variants={fadeUp}
+              whileHover={{ y: -6 }}
+              className="min-w-[500px] h-[260px] bg-white border border-gray-200
+                     rounded-xl p-6 shadow-sm hover:shadow-md
+                     transition flex flex-col"
             >
-              {/* Profile */}
+              {/* PROFILE */}
               <div className="flex items-center gap-3">
                 <img
                   src={t.img}
@@ -110,28 +143,25 @@ const Testimonials = () => {
                 </div>
               </div>
 
-              {/* Text */}
+              {/* TEXT */}
               <p className="text-sm text-gray-700 mt-3 leading-relaxed text-left">
                 {t.text}
               </p>
 
-              {/* Icons (STAYS AT BOTTOM) */}
+              {/* SOCIAL ICONS */}
               <div className="flex gap-4 mt-auto text-gray-400">
-                <FaLinkedin className="cursor-pointer hover:text-green-700 text-xl" />
-                <FaInstagram className="cursor-pointer hover:text-green-700 text-xl" />
+                <motion.span whileHover={{ scale: 1.15 }}>
+                  <FaLinkedin className="cursor-pointer hover:text-green-700 text-xl" />
+                </motion.span>
+                <motion.span whileHover={{ scale: 1.15 }}>
+                  <FaInstagram className="cursor-pointer hover:text-green-700 text-xl" />
+                </motion.span>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
-
-      {/* See More */}
-      {/* <div className="text-center mt-6">
-        <button className="text-green-700 font-medium hover:underline">
-          See More
-        </button>
-      </div> */}
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

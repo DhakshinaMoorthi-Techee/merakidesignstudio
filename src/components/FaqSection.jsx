@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { fadeUp, stagger } from "../data/animations";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
@@ -47,56 +49,76 @@ export default function FaqSection() {
 
   return (
     <section className="max-w-5xl mx-auto px-6 py-20">
-      {/* Header */}
-      <div className="text-center mb-14">
-        <p className="text-green-700 text-xl tracking-wide uppercase">
-          FAQ
-        </p>
+      {/* HEADER */}
+      <motion.div
+        className="text-center mb-14"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <p className="text-green-700 text-xl tracking-wide uppercase">FAQ</p>
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mt-2">
           Clear Your Doubts Here
         </h2>
-      </div>
+      </motion.div>
 
-      {/* FAQ Items */}
-      <div className="divide-y">
+      {/* FAQ ITEMS */}
+      <motion.div
+        className="divide-y"
+        variants={stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+      >
         {faqs.map((faq, index) => {
           const isOpen = index === activeIndex;
 
           return (
-            <div
+            <motion.div
               key={index}
+              variants={fadeUp}
               className="py-6 cursor-pointer"
-              onClick={() =>
-                setActiveIndex(isOpen ? null : index)
-              }
+              onClick={() => setActiveIndex(isOpen ? null : index)}
             >
+              {/* QUESTION */}
               <div className="flex justify-between items-center">
                 <h3 className="text-lg font-medium text-gray-900">
                   {faq.question}
                 </h3>
 
-                {/* Icon */}
-                <span className="flex items-center justify-center w-7 h-7 border border-green-700 rounded-full text-green-700">
+                {/* ICON */}
+                <motion.span
+                  animate={{ rotate: isOpen ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex items-center justify-center w-7 h-7
+                         border border-green-700 rounded-full
+                         text-green-700 text-lg"
+                >
                   {isOpen ? "−" : "+"}
-                </span>
+                </motion.span>
               </div>
 
-              {/* Answer */}
-              <div
-                className={`grid transition-all duration-300 ease-in-out ${
-                  isOpen
-                    ? "grid-rows-[1fr] opacity-100 mt-4"
-                    : "grid-rows-[0fr] opacity-0"
-                }`}
-              >
-                <div className="overflow-hidden text-gray-500 leading-relaxed text-left">
-                  {faq.answer}
-                </div>
-              </div>
-            </div>
+              {/* ANSWER */}
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.35, ease: "easeOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="mt-4 text-gray-500 leading-relaxed text-left">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 }

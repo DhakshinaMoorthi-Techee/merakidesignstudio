@@ -1,10 +1,18 @@
 import { useState } from "react";
+import { fadeUp } from "../data/animations";
+import { motion } from "framer-motion";
 
 export default function RegisterForm() {
   const [activeTab, setActiveTab] = useState("demo");
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-8 max-w-md">
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="bg-white rounded-2xl border border-gray-200 p-8 max-w-md"
+    >
       {/* Header */}
       <h3 className="text-3xl font-semibold text-gray-900 mb-3 text-left">
         Register Now
@@ -14,7 +22,7 @@ export default function RegisterForm() {
       </p>
 
       {/* Tabs Container */}
-      <div className="bg-gray-100 rounded-full p-1 flex mb-8">
+      <motion.div className="bg-gray-100 rounded-full p-1 flex mb-8" layout>
         <button
           onClick={() => setActiveTab("demo")}
           className={`flex-1 text-sm font-medium py-2 rounded-full transition cursor-pointer ${
@@ -36,12 +44,17 @@ export default function RegisterForm() {
         >
           Course Registration
         </button>
-      </div>
+      </motion.div>
 
       {/* Form */}
-      <form className="space-y-6">
+      <motion.form
+        className="space-y-6"
+        variants={{
+          visible: { transition: { staggerChildren: 0.08 } },
+        }}
+      >
         {/* Name */}
-        <div className="grid grid-cols-2 gap-4">
+        <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4">
           <div className="flex flex-col items-start">
             <label className="form-label mb-1">First name</label>
             <input
@@ -63,10 +76,10 @@ export default function RegisterForm() {
              focus:outline-none focus:ring-1 focus:ring-green-900/30"
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Email */}
-        <div className="flex flex-col items-start">
+        <motion.div variants={fadeUp} className="flex flex-col items-start">
           <label className="form-label mb-1">Email</label>
           <input
             type="email"
@@ -75,10 +88,10 @@ export default function RegisterForm() {
              text-gray-900 placeholder:text-gray-400
              focus:outline-none focus:ring-1 focus:ring-green-900/30"
           />
-        </div>
+        </motion.div>
 
         {/* Phone */}
-        <div className="flex flex-col items-start">
+        <motion.div variants={fadeUp} className="flex flex-col items-start">
           <label className="form-label mb-1">Phone number</label>
           <input
             type="tel"
@@ -87,10 +100,10 @@ export default function RegisterForm() {
              text-gray-900 placeholder:text-gray-400
              focus:outline-none focus:ring-1 focus:ring-green-900/30"
           />
-        </div>
+        </motion.div>
 
         {/* Message */}
-        <div className="flex flex-col items-start">
+        <motion.div variants={fadeUp} className="flex flex-col items-start">
           <label className="form-label mb-1">Message</label>
           <textarea
             rows="6"
@@ -98,16 +111,18 @@ export default function RegisterForm() {
              text-gray-900 placeholder:text-gray-400
              focus:outline-none focus:ring-1 focus:ring-green-900/30 resize-none"
           />
-        </div>
+        </motion.div>
 
         {/* Button */}
-        <button
-          type="submit"
-          className="w-full rounded-lg bg-green-900 text-white py-3 text-sm font-medium hover:bg-green-800 transition cursor-pointer"
+        <motion.button
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+          className="w-full rounded-lg bg-green-900 text-white py-3
+                     text-sm font-medium hover:bg-green-800 transition cursor-pointer"
         >
           Register
-        </button>
-      </form>
-    </div>
+        </motion.button>
+      </motion.form>
+    </motion.div>
   );
 }
