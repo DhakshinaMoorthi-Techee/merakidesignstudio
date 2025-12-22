@@ -3,8 +3,8 @@ import { fadeUp, fadeIn, scaleIn, stagger } from "../data/animations";
 import { LuArrowRight, LuBadgeCheck } from "react-icons/lu";
 import { HiOutlineVideoCamera, HiOutlineTrophy } from "react-icons/hi2";
 
-import Banner1 from "../assets/images/banner1.jpg";
-import Banner2 from "../assets/images/banner2.jpg";
+import Banner1 from "../assets/images/banner1.png";
+import Banner2 from "../assets/images/banner2.png";
 import BannerAvatar1 from "../assets/images/banneravatar1.jpg";
 import BannerAvatar2 from "../assets/images/banneravatar2.jpg";
 import BannerAvatar3 from "../assets/images/banneravatar3.jpg";
