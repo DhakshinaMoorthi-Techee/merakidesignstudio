@@ -22,7 +22,7 @@ export default function Hero() {
               className="text-green-800 font-medium underline cursor-pointer"
               onClick={() =>
                 document
-                  .getElementById("career")
+                  .getElementById("register")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
@@ -52,7 +52,7 @@ export default function Hero() {
               className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 hover:border-green-900 border transition"
               onClick={() =>
                 document
-                  .getElementById("career")
+                  .getElementById("register")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >

@@ -7,7 +7,7 @@ export default function RegisterForm() {
 
   return (
     <motion.div
-      id="career"
+      id="register"
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"

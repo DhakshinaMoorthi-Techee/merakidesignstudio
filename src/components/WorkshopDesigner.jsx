@@ -114,7 +114,7 @@ export default function WorkshopSection() {
             <button
               onClick={() =>
                 document
-                  .getElementById("career")
+                  .getElementById("register")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               className="bg-green-900 text-white border px-6 py-3 rounded-lg

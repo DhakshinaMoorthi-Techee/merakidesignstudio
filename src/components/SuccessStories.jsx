@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import StudentReview from "../assets/Videos/StudentReview.mp4";
 import { cardAnim, fadeUp, stagger } from "../data/animations";
 import { motion } from "framer-motion";
 
@@ -8,18 +7,26 @@ export default function SuccessStories() {
   const videoRefs = useRef([]);
 
   const stories = [
-    { name: "Albert Flores", role: "Landscape Designer", video: StudentReview },
+    {
+      name: "Albert Flores",
+      role: "Landscape Designer",
+      video: "https://youtube.com/shorts/6Vwf8EYdjK8?feature=share",
+    },
     {
       name: "Leslie Alexander",
       role: "Landscape Designer",
-      video: StudentReview,
+      video: "https://youtube.com/shorts/6Vwf8EYdjK8?feature=share",
     },
     {
       name: "Courtney Henry",
       role: "Landscape Designer",
-      video: StudentReview,
+      video: "https://youtube.com/shorts/6Vwf8EYdjK8?feature=share",
     },
-    { name: "Emily Willson", role: "Landscape Designer", video: StudentReview },
+    {
+      name: "Emily Willson",
+      role: "Landscape Designer",
+      video: "https://youtube.com/shorts/6Vwf8EYdjK8?feature=share",
+    },
   ];
 
   const handlePlayPause = (index) => {

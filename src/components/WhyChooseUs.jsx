@@ -154,7 +154,7 @@ export default function WhyChooseUs() {
                  hover:bg-[#166b3f] transition"
           onClick={() =>
             document
-              .getElementById("career")
+              .getElementById("register")
               ?.scrollIntoView({ behavior: "smooth" })
           }
         >
