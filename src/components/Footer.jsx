@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[#154E2E] text-white">
+    <footer className="bg-green-900 text-white">
       <motion.div
         className="max-w-7xl mx-auto px-8 pt-16 pb-8"
         initial="hidden"
@@ -50,11 +50,15 @@ export default function Footer() {
             <motion.div variants={fadeUp} className="text-left">
               <h4 className="text-sm font-semibold mb-4">Navigation</h4>
               <ul className="space-y-3 text-sm text-white/60">
-                {["About Us", "Workshop", "Works", "Contact"].map((item) => (
+                {["About", "Workshop", "Contact", "Register"].map((item) => (
                   <li key={item}>
                     <a
-                      href={`/${item.toLowerCase().replace(" ", "")}`}
-                      className="hover:text-white transition"
+                      onClick={() =>
+                        document
+                          .getElementById(item.toLowerCase().replace(" ", ""))
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
+                      className="hover:text-white transition cursor-pointer"
                     >
                       {item}
                     </a>
@@ -69,7 +73,7 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-white/60">
                 <li>
                   <a
-                    href="https://wa.me/XXXXXXXXXX"
+                    href="https://wa.me/916238316758"
                     target="_blank"
                     className="hover:text-white transition"
                   >
@@ -78,7 +82,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://instagram.com/"
+                    href="https://www.instagram.com/meraki.design.studio_/"
                     target="_blank"
                     className="hover:text-white transition"
                   >

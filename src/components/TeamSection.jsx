@@ -2,70 +2,7 @@ import React from "react";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { fadeUp, stagger } from "../data/animations";
 import { motion } from "framer-motion";
-
-const teamMembers = [
-  {
-    name: "Olivia Rhye",
-    role: "Landscape Designer",
-    company: "At ABC Company",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
-  },
-  {
-    name: "Phoenix Baker",
-    role: "Landscape Designer",
-    company: "At ABC Company",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-  },
-  {
-    name: "Lana Steiner",
-    role: "Landscape Designer",
-    company: "At ABC Company",
-    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-  },
-  {
-    name: "Demi Wilkinson",
-    role: "Landscape Designer",
-    company: "At ABC Company",
-    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-  },
-  {
-    name: "Candice Wu",
-    role: "Landscape Designer",
-    company: "At ABC Company",
-    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-  },
-  {
-    name: "Natali Craig",
-    role: "Landscape Designer",
-    company: "At ABC Company",
-    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-  },
-  {
-    name: "Drew Cano",
-    role: "Landscape Designer",
-    company: "At ABC Company",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-  },
-  {
-    name: "Orlando Diggs",
-    role: "Landscape Designer",
-    company: "At ABC Company",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-  },
-];
-
-const IconBar = () => (
-  <div className="flex gap-4 mt-3 text-gray-400">
-    <FaLinkedin
-      size={20}
-      className="cursor-pointer hover:text-green-700 transition"
-    />
-    <FaInstagram
-      size={20}
-      className="cursor-pointer hover:text-green-700 transition"
-    />
-  </div>
-);
+import { TeamMembers } from "../data/students";
 
 export default function TeamSection() {
   return (
@@ -90,7 +27,7 @@ export default function TeamSection() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
       >
-        {teamMembers.map((member, index) => (
+        {TeamMembers.map((member, index) => (
           <motion.div
             key={index}
             variants={fadeUp}
@@ -99,7 +36,7 @@ export default function TeamSection() {
           >
             <div className="overflow-hidden rounded-lg mb-4">
               <motion.img
-                src={member.img}
+                src={member.image}
                 alt={member.name}
                 className="w-full h-64 object-cover"
                 whileHover={{ scale: 1.06 }}
@@ -108,16 +45,23 @@ export default function TeamSection() {
             </div>
 
             <h3 className="text-lg font-semibold">{member.name}</h3>
-            <p className="text-green-700 text-sm">{member.role}</p>
-            <p className="text-sm text-gray-600">{member.company}</p>
+            <p className="text-green-700 text-sm">{member.degree}</p>
+            <p className="text-sm text-gray-500">{member.company}</p>
 
-            <IconBar />
+            <div className="flex gap-4 mt-3 text-gray-400">
+              <a target="_blank" href={member.linkedin}>
+                <FaLinkedin
+                  size={20}
+                  className="cursor-pointer hover:text-green-700 transition"
+                />
+              </a>
+            </div>
           </motion.div>
         ))}
       </motion.div>
 
       {/* SEE MORE */}
-      <motion.button
+      {/* <motion.button
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
@@ -127,7 +71,7 @@ export default function TeamSection() {
         className="mt-12 text-green-700 underline text-sm hover:text-green-900 cursor-pointer"
       >
         See More
-      </motion.button>
+      </motion.button> */}
     </div>
   );
 }
