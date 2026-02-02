@@ -12,12 +12,12 @@ import BannerAvatar4 from "../assets/images/banneravatar4.jpg";
 
 export default function Hero() {
   return (
-    <section className="max-w-7xl relative mx-auto px-9 pt-45 pb-20">
-      <div className="grid lg:grid-cols-2 gap-10 items-center text-left">
+    <section className="max-w-7xl relative mx-auto px-4 sm:px-6 md:px-9 pt-26 sm:pt-32 md:pt-45 pb-12 sm:pb-16 md:pb-20">
+      <div className="grid lg:grid-cols-2 gap-8 md:gap-10 items-center text-left">
         {/* LEFT CONTENT */}
         <motion.div variants={stagger} initial="hidden" animate="visible">
-          <motion.p variants={fadeUp} className="text-sm text-gray-800 mb-4">
-            Next Batch Starts December 15,{" "}
+          <motion.p variants={fadeUp} className="text-xs sm:text-sm text-gray-800 mb-3 sm:mb-4">
+            Next Batch Starts April 01,{" "}
             <span
               className="text-green-800 font-medium underline cursor-pointer"
               onClick={() =>
@@ -32,7 +32,7 @@ export default function Hero() {
 
           <motion.h1
             variants={fadeUp}
-            className="text-[60px] leading-[1.1] font-semibold text-gray-900"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight lg:leading-[1.1] font-semibold text-gray-900"
           >
             Master the art of <br />
             Landscape Design
@@ -40,16 +40,16 @@ export default function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="mt-1 text-[58px] font-bold text-green-800 italic"
+            className="mt-1 text-3xl sm:text-4xl md:text-5xl lg:text-[58px] font-bold text-green-800 italic"
             style={{ fontFamily: "Caveat" }}
           >
-            8 Weeks Training Workshop
+            9 Weeks Training Workshop
           </motion.p>
 
           {/* CTA */}
-          <motion.div variants={fadeUp} className="flex gap-4 mt-5">
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-5">
             <button
-              className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-900 hover:border-green-900 border transition"
+              className="bg-green-900 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-white hover:text-green-900 hover:border-green-900 border transition text-sm sm:text-base w-full sm:w-auto"
               onClick={() =>
                 document
                   .getElementById("register")
@@ -60,7 +60,7 @@ export default function Hero() {
             </button>
 
             <button
-              className="group flex items-center gap-2 border px-6 py-3 rounded-lg"
+              className="group flex items-center justify-center gap-2 border px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base w-full sm:w-auto"
               onClick={() =>
                 document
                   .getElementById("workshop")
@@ -69,7 +69,7 @@ export default function Hero() {
             >
               <span className="transition-transform group-hover:translate-x-2 flex items-center gap-3">
                 Weekly Syllabus
-                <LuArrowRight className="text-lg" />
+                <LuArrowRight className="text-base sm:text-lg" />
               </span>
             </button>
           </motion.div>
@@ -77,19 +77,19 @@ export default function Hero() {
           {/* Features */}
           <motion.div
             variants={fadeUp}
-            className="flex gap-10 mt-10 text-md text-gray-800"
+            className="flex flex-wrap gap-6 sm:gap-8 md:gap-10 mt-6 sm:mt-8 md:mt-10 text-sm sm:text-md text-gray-800"
           >
             <div className="flex items-center gap-2">
-              <HiOutlineVideoCamera className="text-green-900" size={24} />
-              Online
+              <HiOutlineVideoCamera className="text-green-900" size={20} />
+              <span className="sm:text-base">Online</span>
             </div>
             <div className="flex items-center gap-2">
-              <LuBadgeCheck className="text-green-900" size={24} />
-              Hand-On
+              <LuBadgeCheck className="text-green-900" size={20} />
+              <span className="sm:text-base">Hands-On</span>
             </div>
             <div className="flex items-center gap-2">
-              <HiOutlineTrophy className="text-green-900" size={24} />
-              Certificate
+              <HiOutlineTrophy className="text-green-900" size={20} />
+              <span className="sm:text-base">Certificate</span>
             </div>
           </motion.div>
         </motion.div>
@@ -98,19 +98,23 @@ export default function Hero() {
         <motion.div
           initial="hidden"
           animate="visible"
-          className="relative flex gap-6"
+          className="relative flex gap-3 sm:gap-4 md:gap-6 mt-8 lg:mt-0"
         >
-          {/* Left image */}
+          {/* Left image - Hidden on mobile */}
           <motion.div
             variants={scaleIn}
-            className="w-[48%] flex flex-col gap-5"
+            className="hidden sm:flex w-[48%] flex-col gap-3 md:gap-5"
           >
-            <img src={Banner1} className="rounded-2xl h-[275px] object-cover" />
+            <img 
+              src={Banner1} 
+              className="rounded-xl md:rounded-2xl h-[200px] sm:h-[220px] md:h-[275px] object-cover" 
+              alt="Landscape Design Workshop"
+            />
 
-            {/* Testimonial card */}
+            {/* Testimonial card - Hidden on mobile */}
             <motion.div
               variants={fadeUp}
-              className="bg-white rounded-xl border border-gray-200 shadow-md p-5"
+              className="bg-white rounded-lg md:rounded-xl border border-gray-200 shadow-md p-3 sm:p-4 md:p-5"
             >
               <div className="flex -space-x-2 mb-2">
                 {[
@@ -122,26 +126,34 @@ export default function Hero() {
                   <img
                     key={i}
                     src={img}
-                    className="w-8 h-8 rounded-full border"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border"
+                    alt={`Student ${i + 1}`}
                   />
                 ))}
               </div>
-              <div className="text-yellow-400 text-lg">★★★★★</div>
-              <p className="text-sm text-gray-700">
+              <div className="text-yellow-400 text-base sm:text-lg">★★★★★</div>
+              <p className="text-xs sm:text-sm text-gray-700">
                 <strong>20+ professionals</strong> are already ahead of you.
               </p>
             </motion.div>
           </motion.div>
 
-          {/* Right image */}
-          <motion.div variants={scaleIn} className="w-[52%]">
-            <img src={Banner2} className="rounded-2xl h-[450px] object-cover" />
+          {/* Right image - Full width on mobile */}
+          <motion.div 
+            variants={scaleIn} 
+            className="w-full sm:w-[52%]"
+          >
+            <img 
+              src={Banner2} 
+              className="rounded-xl md:rounded-2xl h-[300px] sm:h-[350px] md:h-[450px] w-full object-cover" 
+              alt="Landscape Design Examples"
+            />
           </motion.div>
 
-          {/* Curved arrow */}
+          {/* Curved arrow - Hidden on mobile and tablet */}
           <motion.div
             variants={fadeIn}
-            className="absolute bottom-[-25px] left-[-70px] flex items-end gap-3"
+            className="hidden lg:flex absolute bottom-[-25px] left-[-70px] items-end gap-3"
           >
             <svg
               width="83"

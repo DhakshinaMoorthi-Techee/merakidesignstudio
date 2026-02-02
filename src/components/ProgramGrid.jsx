@@ -13,7 +13,7 @@ export default function ProgramGrid() {
       <motion.div
         className="grid md:grid-cols-3 gap-10"
         variants={stagger}
-        initial="hidden"
+        // initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
       >

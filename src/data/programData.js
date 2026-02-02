@@ -197,7 +197,7 @@ requirements.
 </p>`,
   },
   {
-    week: "Week 8",
+    week: "Week 8 & 9",
     title: "Irrigation & Lighting Design",
     image: Week8,
     topics: 5,
@@ -211,13 +211,14 @@ from industry experts through interactive knowledge-sharing sessions.
 
 <h4>What You Will Learn (Syllabus):</h4>
 <ul>
-  <li>Irrigation design for landscape projects</li>
-  <li>Lighting design for outdoor spaces</li>
+  <li>Irrigation Design & Lighting Design</li>
   <li>Knowledge sharing and industry insights</li>
   <li>
     Daily free webinars on advanced topics, industry trends,
     and live Q&amp;A sessions with experts
   </li>
+  <li>Urban Park Design - Planning of park zones with pathways, seating, green open spaces, and suitable planting for shade and visual appeal</li>
+  <li>Resort Design Concept - Landscape concept planning for pools, walkways, leisure areas, villas, with appropriate plant and material selection to enhance resort ambience and comfort</li>
 </ul>
 
 <h4>Career Use:</h4>
