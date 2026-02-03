@@ -1,6 +1,7 @@
 import { FaQuoteLeft } from "react-icons/fa";
 import { fadeLeft, fadeRight, fadeUpSoft } from "../data/animations";
 import { motion } from "framer-motion";
+import FounderImage from "../assets/images/Founder-image.png";
 
 export default function AboutFounder() {
   return (
@@ -62,7 +63,7 @@ export default function AboutFounder() {
         >
           <div className="relative w-full max-w-[300px] sm:max-w-[320px] md:max-w-[360px] h-[400px] sm:h-[440px] md:h-[480px] rounded-xl sm:rounded-2xl overflow-hidden shadow-md">
             <img
-              src="/src/assets/images/Founder-image.jpg"
+              src={FounderImage}
               alt="Founder Dhana Priya A"
               className="w-full h-full object-cover"
             />
