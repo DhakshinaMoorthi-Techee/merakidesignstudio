@@ -32,7 +32,7 @@ export default function Hero() {
 
           <motion.h1
             variants={fadeUp}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight lg:leading-[1.1] font-semibold text-gray-900"
+            className="text-5xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight lg:leading-[1.1] font-semibold text-gray-900"
           >
             Master the art of <br />
             Landscape Design

@@ -14,10 +14,10 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
-      <div className="flex justify-between items-center py-3 px-12">
+      <div className="flex justify-between items-center py-3 lg:px-12 px-4">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <img src={MerakiLogo} alt="Meraki" className="w-14" />
+          <img src={MerakiLogo} alt="Meraki" className="w-14" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
         </div>
 
         {/* Desktop Menu */}
@@ -74,6 +74,7 @@ export default function Navbar() {
             <li
               key={index}
               onClick={() => {
+                setMobileOpen(false);
                 const section = document.getElementById(item.id);
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
