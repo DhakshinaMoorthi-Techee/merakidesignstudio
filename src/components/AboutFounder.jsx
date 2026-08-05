@@ -6,7 +6,7 @@ import FounderImage from "../assets/images/Founder-image.png";
 export default function AboutFounder() {
   return (
     <section id="about" className="w-full max-w-7xl bg-white py-8 sm:py-10 md:py-14 px-4 sm:px-6 md:px-8 mx-auto">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center">
         
         {/* LEFT TEXT SECTION */}
         <motion.div
@@ -26,31 +26,47 @@ export default function AboutFounder() {
 
           <motion.h2
             variants={fadeUpSoft}
-            className="text-lg sm:text-xl md:text-[22px] font-semibold text-gray-900 mb-4 sm:mb-5 md:mb-6"
+            className="text-lg sm:text-xl md:text-[22px] font-semibold text-gray mb-2 sm:mb-5 md:mb-4"
           >
-            ABOUT THE FOUNDER
+            MEET OUR FOUNDER
           </motion.h2>
 
           <motion.p
             variants={fadeUpSoft}
-            className="text-sm sm:text-base md:text-[18px] leading-relaxed text-gray-500 mb-4 sm:mb-5"
+            className="text-sm sm:text-base md:text-[18px] leading-relaxed text-gray-700 mb-4 sm:mb-5"
           >
-            I am A. Dhanapriya, the founder of Meraki Design Studio—a space where 
-            creativity, nature, and technical excellence come together to craft 
-            meaningful landscape experiences.
+            Dhanapriya. A <br/>
+            Founder & Landscape Designer | Eyrie Studio
           </motion.p>
 
           <motion.p
             variants={fadeUpSoft}
-            className="text-sm sm:text-base md:text-[18px] leading-relaxed text-gray-500"
+            className="text-sm sm:text-base md:text-[14px] leading-relaxed text-gray-500  mb-4 sm:mb-5"
           >
-            My journey began with a Bachelor of Science in Agriculture, which gave 
-            me a strong foundation in plant science, soil behavior, irrigation systems, 
-            and environmental management. With this scientific knowledge and a deep 
-            passion for outdoor spaces, I entered the world of landscape design, where 
-            I have spent the last five years designing, managing, and delivering 
-            landscape projects across Kerala, Tamil Nadu, UAE and Karnataka.
+            I am A. Dhanapriya, the Founder of Eyrie Studio, A design studio built on the belief that exceptional landscapes are created through the perfect balance of nature, creativity, and technical expertise.
           </motion.p>
+
+           <motion.p
+            variants={fadeUpSoft}
+            className="text-sm sm:text-base md:text-[14px] leading-relaxed text-gray-500  mb-4 sm:mb-5"
+          >
+            My journey began with a Bachelor of Science in Agriculture, where I developed a deep understanding of plant science, soil systems, irrigation engineering, and sustainable environmental practices. This strong scientific foundation, combined with a passion for transforming outdoor spaces, naturally led me into the world of landscape architecture.
+          </motion.p>
+
+           <motion.p
+            variants={fadeUpSoft}
+            className="text-sm sm:text-base md:text-[14px] leading-relaxed text-gray-500  mb-4 sm:mb-5"
+          >
+            Over the past 5+ years, I have had the opportunity to design, manage, and execute diverse landscape projects across Kerala, Tamil Nadu, Karnataka, and the United Arab Emirates. Each project has strengthened my belief that landscapes should not only be visually striking but also functional, sustainable, and thoughtfully connected to their surroundings.
+          </motion.p>
+
+          <motion.p
+            variants={fadeUpSoft}
+            className="text-sm sm:text-base md:text-[14px] leading-relaxed text-gray-500"
+          >
+            At Eyrie Studio, our vision extends beyond creating beautiful landscapes. We are committed to designing environments that inspire people, enhance everyday living, and stand the test of time. Through innovative design, technical precision, and a client-focused approach, we transform ideas into meaningful outdoor experiences.
+          </motion.p>
+
         </motion.div>
 
         {/* RIGHT IMAGE SECTION */}
@@ -61,7 +77,7 @@ export default function AboutFounder() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="relative w-full max-w-[300px] sm:max-w-[320px] md:max-w-[360px] h-[400px] sm:h-[440px] md:h-[480px] rounded-xl sm:rounded-2xl overflow-hidden shadow-md">
+          <div className="relative w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] h-[540px] sm:h-[580px] md:h-[620px] rounded-xl sm:rounded-2xl overflow-hidden shadow-md">
             <img
               src={FounderImage}
               alt="Founder Dhana Priya A"
@@ -69,7 +85,7 @@ export default function AboutFounder() {
             />
 
             {/* Bottom Black Fade */}
-            <div className="absolute bottom-0 left-0 w-full h-24 sm:h-28 md:h-32 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 w-full h-24 sm:h-28 md:h-32 bg-linear-to-t from-black/70 to-transparent"></div>
 
             {/* Name & Role */}
             <motion.div

@@ -17,7 +17,7 @@ export default function Hero() {
         {/* LEFT CONTENT */}
         <motion.div variants={stagger} initial="hidden" animate="visible">
           <motion.p variants={fadeUp} className="text-xs sm:text-sm text-gray-800 mb-3 sm:mb-4">
-            Next Batch Starts April 01,{" "}
+            Next Batch Starts September 15th,{" "}
             <span
               className="text-green-800 font-medium underline cursor-pointer"
               onClick={() =>

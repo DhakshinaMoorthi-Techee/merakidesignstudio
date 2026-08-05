@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <h4 className="text-[#1F7F4C] text-base sm:text-lg font-medium tracking-wide">
-          Why Meraki?
+          Why Eyrie?
         </h4>
 
         <h2 className="mt-2 text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-semibold text-[#111] px-4">

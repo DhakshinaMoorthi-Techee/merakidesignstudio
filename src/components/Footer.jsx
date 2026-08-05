@@ -1,4 +1,4 @@
-import { LuArrowUp } from "react-icons/lu";
+import { LuArrowUp, LuMapPin, LuMail } from "react-icons/lu";
 import FooterLogo from "../assets/images/footer-logo.png";
 import { fadeIn, fadeUp, stagger } from "../data/animations";
 import { motion } from "framer-motion";
@@ -23,7 +23,7 @@ export default function Footer() {
             {/* Logo */}
             <motion.img
               src={FooterLogo}
-              alt="Meraki Design Studio"
+              alt="Eyrie Studio"
               className="h-14"
               variants={fadeIn}
             />
@@ -41,8 +41,25 @@ export default function Footer() {
             </motion.button>
           </motion.div>
 
-          {/* CENTER EMPTY */}
-          <div />
+          {/* CENTER: ADDRESS */}
+          <motion.div variants={fadeUp} className="text-left space-y-4">
+            <h4 className="text-sm font-semibold mb-4">Address</h4>
+            <div className="flex items-start gap-3 text-sm text-white/60 max-w-xs">
+              <LuMapPin size={18} className="mt-0.5 shrink-0" />
+              <span>
+                 Nallalam Rd, near Aishwarys <br/> Banquet hall, Olavanna, <br/>
+                Kozhikode, Kerala, India - 673019
+
+              </span>
+            </div>
+            <a
+              href="mailto:eyriestudiollp@gmail.com"
+              className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition w-fit"
+            >
+              <LuMail size={18} className="shrink-0" />
+              <span>eyriestudiollp@gmail.com</span>
+            </a>
+          </motion.div>
 
           {/* RIGHT LINKS */}
           <motion.div variants={stagger} className="grid grid-cols-2 gap-20">
@@ -73,7 +90,7 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-white/60">
                 <li>
                   <a
-                    href="https://wa.me/916238316758"
+                    href="https://wa.me/919778316758"
                     target="_blank"
                     className="hover:text-white transition"
                   >
@@ -82,7 +99,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/meraki.design.studio_/"
+                    href="https://www.instagram.com/eyriestudio_/"
                     target="_blank"
                     className="hover:text-white transition"
                   >
@@ -92,17 +109,16 @@ export default function Footer() {
               </ul>
             </motion.div>
           </motion.div>
-        </motion.div>
 
-        {/* DIVIDER */}
-        <motion.div
-          variants={fadeUp}
-          className="border-t border-white/10 mt-16 pt-6"
-        >
-          <p className="text-xs text-white/80">
-            © Meraki Design Studio {year} – All Rights Reserved by Meraki Design
-            Studio
-          </p>
+          {/* DIVIDER */}
+          <motion.div
+            variants={fadeUp}
+            className="border-t border-white/10 mt-16 pt-6"
+          >
+            <p className="text-xs text-white/80">
+              © Eyrie Studio {year} – All Rights Reserved by Eyrie Studio
+            </p>
+          </motion.div>
         </motion.div>
       </motion.div>
     </footer>

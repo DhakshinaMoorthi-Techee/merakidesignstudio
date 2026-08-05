@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import MerakiLogo from "../assets/images/meraki-logo.png";
+import EyrieLogo from "../assets/images/eyrie_header_logo.png";
 import { LuArrowDown, LuChevronDown, LuMoveDown } from "react-icons/lu";
 
 export default function Navbar() {
@@ -14,10 +14,10 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
-      <div className="flex justify-between items-center py-3 lg:px-12 px-4">
+      <div className="flex justify-between pl-2 pr-8 items-center py-3 md:pl-4 md:pr-4">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <img src={MerakiLogo} alt="Meraki" className="w-14" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
+        <div>
+          <img src={EyrieLogo} alt="Eyrie" className="w-45 md:w-50 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
         </div>
 
         {/* Desktop Menu */}
