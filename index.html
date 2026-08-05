@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link
       rel="icon"
       type="image/svg+xml"
-      href="./src/assets/images/meraki-logo.png"
+      href="./src/assets/images/eyrie_logo.png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,11 +19,63 @@
     />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>merakidesignstudio</title>
+    <title>Eyrie Studio</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/919778316758"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-float"
+      aria-label="Chat on WhatsApp"
+    >
+      <img src="/src/assets/images/whatsapp_logo.svg" alt="WhatsApp" />
+    </a>
+
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        bottom: calc(95px + env(safe-area-inset-bottom));
+        right: 30px;
+        background-color: #fff;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        text-decoration: none;
+      }
+
+      .whatsapp-float img {
+        width: 60%;
+        height: 60%;
+        object-fit: contain;
+        pointer-events: none;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      @media (max-width: 480px) {
+        .whatsapp-float {
+          width: 55px;
+          height: 55px;
+          bottom: calc(95px + env(safe-area-inset-bottom));
+          right: 30px;
+        }
+      }
+    </style>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},

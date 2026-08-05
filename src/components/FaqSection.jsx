@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "What services does Meraki Design Studio offer?",
+    question: "What services does Eyrie Studio offer?",
     answer: (
       <ul className="list-decimal pl-5 space-y-1">
         <li>Residential & commercial landscape design</li>

@@ -35,7 +35,7 @@ export const TeamMembers = [
     company: "Elite Landscape LLC - Project Coordinator",
     linkedin: "https://www.linkedin.com/in/afeefa-abbas-mv020033/",
     review:
-      "The 6-week Landscape Designing workshop at Meraki Design Studio was an excellent experience. I learned AutoCAD, SketchUp, Lumion, Photoshop, and garden design basics with great mentor support. The guidance and assignments boosted my confidence and helped me grow my design skills.",
+      "The 6-week Landscape Designing workshop at Eyrie Studio was an excellent experience. I learned AutoCAD, SketchUp, Lumion, Photoshop, and garden design basics with great mentor support. The guidance and assignments boosted my confidence and helped me grow my design skills.",
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const TeamMembers = [
     company: "Thenaruvi herbal village - Landscape Supervisor",
     linkedin: "https://www.linkedin.com/in/jeeva-nandham-40b182237/",
     review:
-      "Meraki offers a complete landscape learning experience. The training includes AutoCAD, Lumion, SketchUp, irrigation drawings, execution, and plant selection. The instructors are supportive and focus on both software and real-world landscape practices. I highly recommend this program for anyone serious about building a career in landscape design.",
+      "Eyrie offers a complete landscape learning experience. The training includes AutoCAD, Lumion, SketchUp, irrigation drawings, execution, and plant selection. The instructors are supportive and focus on both software and real-world landscape practices. I highly recommend this program for anyone serious about building a career in landscape design.",
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ export const TeamMembers = [
     company: "Adani ports & logistics",
     linkedin: "https://www.linkedin.com/in/keerthana-r-56b75a185/",
     review:
-      "Meraki Design Studio is one of the best places to learn all major landscape design softwares (CAD, lumion, sketchup, photoshop) at a very reasonable cost. The faculty explains every concept clearly and is always available to clear doubts, without any fixed time limits. They take special efforts to organize guest lectures and give practical exposure to real design projects.",
+      "Eyrie Studio is one of the best places to learn all major landscape design softwares (CAD, lumion, sketchup, photoshop) at a very reasonable cost. The faculty explains every concept clearly and is always available to clear doubts, without any fixed time limits. They take special efforts to organize guest lectures and give practical exposure to real design projects.",
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const TeamMembers = [
     company: "Wintrack Greenscape Pvt Ltd",
     linkedin: "",
     review:
-      "A meraki design studio gave a fine knowledge about landscape 3D sketch up, Lumion Autocad and conduct a practical classes and conduct doubt clearing classes and lots of to us. They invite good position people in landscape sector in and out india it's very helpful us.",
+      "A Eyrie studio gave a fine knowledge about landscape 3D sketch up, Lumion Autocad and conduct a practical classes and conduct doubt clearing classes and lots of to us. They invite good position people in landscape sector in and out india it's very helpful us.",
   },
   {
     id: 5,
@@ -85,7 +85,7 @@ export const TeamMembers = [
     company: "Freelancer",
     linkedin: "https://www.linkedin.com/in/umar-farook-906573362",
     review:
-      "I attended a landscaping course at Meraki Design Studio and gained a solid foundation in landscape design principles. The course provided hands-on training in AutoCAD, SketchUp, and Lumion, which helped me develop strong design and visualization skills. I also learned about irrigation engineering and its practical applications in landscaping projects",
+      "I attended a landscaping course at Eyrie Studio and gained a solid foundation in landscape design principles. The course provided hands-on training in AutoCAD, SketchUp, and Lumion, which helped me develop strong design and visualization skills. I also learned about irrigation engineering and its practical applications in landscaping projects",
   },
   {
     id: 7,
@@ -105,7 +105,7 @@ export const TeamMembers = [
     company: "Earthpulse landscape architects",
     linkedin: "",
     review:
-      "I attended an online landscaping and design class at Meraki Design Studio, and it was both informative and inspiring. The session covered design fundamentals, AutoCAD, SketchUp, Photoshop, Lumion, and sustainable landscaping practices. It helped me better understand how creativity and functionality come together in landscape design. I’m grateful for the learning experience.",
+      "I attended an online landscaping and design class at Eyrie Studio, and it was both informative and inspiring. The session covered design fundamentals, AutoCAD, SketchUp, Photoshop, Lumion, and sustainable landscaping practices. It helped me better understand how creativity and functionality come together in landscape design. I’m grateful for the learning experience.",
   },
   {
     id: 9,
@@ -140,7 +140,7 @@ export const TeamMembers = [
     image: loki,
     rating: 5,
     review:
-      "Meraki Design Studio is an excellent place to learn landscape design at an affordable cost. The faculty explains concepts clearly, provides continuous doubt support, and offers practical exposure through real design projects and guest lectures. The course perfectly balances theory, software skills, and gardening-based landscape planning, boosting confidence to work professionally.",
+      "Eyrie Studio is an excellent place to learn landscape design at an affordable cost. The faculty explains concepts clearly, provides continuous doubt support, and offers practical exposure through real design projects and guest lectures. The course perfectly balances theory, software skills, and gardening-based landscape planning, boosting confidence to work professionally.",
     linkedin: "https://www.linkedin.com/in/logesh09",
   },
   {
@@ -164,7 +164,7 @@ export const TeamMembers = [
     image: chandana,
     rating: 5,
     review:
-      "Meraki Design Studio is a great place to learn and grow. I learned many practical design techniques and gained real-time knowledge. The teaching style is friendly and supportive. I truly enjoyed the learning experience.",
+      "Eyrie Studio is a great place to learn and grow. I learned many practical design techniques and gained real-time knowledge. The teaching style is friendly and supportive. I truly enjoyed the learning experience.",
     linkedin: "https://www.linkedin.com/in/sai-chandana-6a8886270",
   },
   {
@@ -212,7 +212,7 @@ export const TeamMembers = [
     image: gobika,
     rating: 5,
     review:
-      "The Meraki Designs workshop was extremely useful to me. I gained a lot of knowledge and skills understanding from the sessions which will be very helpful for my career. Thank you for your continuous support, guidance, and for offering such a valuable learning experience",
+      "The Eyries workshop was extremely useful to me. I gained a lot of knowledge and skills understanding from the sessions which will be very helpful for my career. Thank you for your continuous support, guidance, and for offering such a valuable learning experience",
     linkedin: "https://www.linkedin.com/in/gobikac",
   },
   {
@@ -224,7 +224,7 @@ export const TeamMembers = [
     image: gopikrishna,
     rating: 5,
     review:
-      "Meraki Design Studio Landscape Design workshop is very useful. The professional level classes helped  me to upgrade my skills on Autocad, Sketchup, Lumion Pro, Adobe Photoshop & QGIS from base map to 3d visualisation covering Softscape, Hardscape, Barbeque Kitchen, Swimming Pools & Pergola designs needed in Landscape industry. The course focused on UAE Specific planting designs, irrigation system and regulatory information. Looking forward for more classes from Meraki.",
+      "Eyrie Studio Landscape Design workshop is very useful. The professional level classes helped  me to upgrade my skills on Autocad, Sketchup, Lumion Pro, Adobe Photoshop & QGIS from base map to 3d visualisation covering Softscape, Hardscape, Barbeque Kitchen, Swimming Pools & Pergola designs needed in Landscape industry. The course focused on UAE Specific planting designs, irrigation system and regulatory information. Looking forward for more classes from Eyrie.",
     linkedin: "https://www.linkedin.com/in/gopi-krishna-835595129",
   },
   {
@@ -236,7 +236,7 @@ export const TeamMembers = [
     image: dilip,
     rating: 5,
     review:
-      "I’m Dilip Kumar M, a BSc (Hons) Horticulture graduate who chose landscape design as my career path. The 7-week workshop at Meraki Design Studio gave me strong hands-on skills in garden design, AutoCAD, SketchUp, Lumion, Photoshop, and QGIS. The practical, industry-focused training greatly supported my career growth in landscape design.",
+      "I’m Dilip Kumar M, a BSc (Hons) Horticulture graduate who chose landscape design as my career path. The 7-week workshop at Eyrie Studio gave me strong hands-on skills in garden design, AutoCAD, SketchUp, Lumion, Photoshop, and QGIS. The practical, industry-focused training greatly supported my career growth in landscape design.",
     linkedin: "https://www.linkedin.com/in/dilip-kumar-m-8728b631a",
   },
   {
@@ -272,7 +272,7 @@ export const TeamMembers = [
     image: dhivakar,
     rating: 5,
     review:
-      "I recently completed the landscape design course with Priya at Meraki Design Studio. It was a fantastic experience learning the full workflow from design theory to technical tools like AutoCAD, SketchUp, and Lumion. Highly recommended for anyone looking to master 3D visualization!",
+      "I recently completed the landscape design course with Priya at Eyrie Studio. It was a fantastic experience learning the full workflow from design theory to technical tools like AutoCAD, SketchUp, and Lumion. Highly recommended for anyone looking to master 3D visualization!",
     linkedin: "https://www.linkedin.com/in/dhivakar-b-378056247",
   },
   {
@@ -284,7 +284,7 @@ export const TeamMembers = [
     image: elma,
     rating: 5,
     review:
-      "The course was very informative and helpful,as being a fresher in landscaping,the course help me gain knowledge in the field and also get hands on experience in doing project in sketchup, lumion, photoshop, autocad, and also the information regarding various gardens, landscaping plants, irrigation planning, swimming pools, various plans, pergola, barbeque and many more,I hope the knowledge gained is much helpful for my future growth in career and in upskilling myself.Thank Meraki designs for this milestone step taken which is helpful to a lot of people.",
+      "The course was very informative and helpful,as being a fresher in landscaping,the course help me gain knowledge in the field and also get hands on experience in doing project in sketchup, lumion, photoshop, autocad, and also the information regarding various gardens, landscaping plants, irrigation planning, swimming pools, various plans, pergola, barbeque and many more,I hope the knowledge gained is much helpful for my future growth in career and in upskilling myself.Thank Eyries for this milestone step taken which is helpful to a lot of people.",
     linkedin: "https://www.linkedin.com/in/elma-eappen",
   },
   {
@@ -307,7 +307,7 @@ export const TeamMembers = [
     company: "Agriculture Engineer",
     image: syedalihaider,
     rating: 5,
-    review: "It was good experience having with Meraki team",
+    review: "It was good experience having with Eyrie team",
     linkedin:
       "https://www.linkedin.com/in/syed-ali-haider-msc-hons-agri-science-s-38b153306",
   },
@@ -320,7 +320,7 @@ export const TeamMembers = [
     image: kumar,
     rating: 5,
     review:
-      "The 7-week Landscaping Design Workshop at Meraki Design Studio offered a complete, industry-focused learning experience. Training in AutoCAD, SketchUp, Lumion, Photoshop, and QGIS built strong skills in drafting, 3D modeling, visualization, presentation, and site analysis. The workshop boosted both technical confidence and creative thinking, making it ideal for aspiring landscape professionals.",
+      "The 7-week Landscaping Design Workshop at Eyrie Studio offered a complete, industry-focused learning experience. Training in AutoCAD, SketchUp, Lumion, Photoshop, and QGIS built strong skills in drafting, 3D modeling, visualization, presentation, and site analysis. The workshop boosted both technical confidence and creative thinking, making it ideal for aspiring landscape professionals.",
     linkedin: "https://www.linkedin.com/in/kumar-p-6b9ab0159",
   },
   {
@@ -332,7 +332,7 @@ export const TeamMembers = [
     image: vishnu,
     rating: 5,
     review:
-      "I'm working person but still I learned a lot and learning more. Classes was so interesting and understandable. Due to heavy work pressure, rotational shift and night shifts, I was unable attend the live session and I informed the trainer, they were so understandable and understood about my situation and allowed to attend record sessions. So, Thank you for understanding. Meraki Design studio is one of the best in the industry.",
+      "I'm working person but still I learned a lot and learning more. Classes was so interesting and understandable. Due to heavy work pressure, rotational shift and night shifts, I was unable attend the live session and I informed the trainer, they were so understandable and understood about my situation and allowed to attend record sessions. So, Thank you for understanding. Eyrie studio is one of the best in the industry.",
     linkedin: "https://www.linkedin.com/in/vishnu-r-4a02b2389",
   },
 ];
