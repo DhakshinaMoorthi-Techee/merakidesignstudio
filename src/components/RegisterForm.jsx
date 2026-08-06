@@ -60,9 +60,12 @@ export default function RegisterForm() {
     setStatus({ type: "", message: "" });
 
     try {
+      // NOTE: field names here must exactly match the hidden static form
+      // in public/index.html (see the snippet provided alongside this file),
+      // or Netlify won't have a matching form to attach this submission to.
       const payload = new URLSearchParams({
         "form-name": "register",
-        botField: "",
+        "bot-field": "", // honeypot — must match data-netlify-honeypot below
         registrationType: activeTab,
         ...formValues,
       });
